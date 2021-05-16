@@ -227,6 +227,7 @@ death-messages:
   mob:
     Bat:
       - "&3%player%&4 was slain by Bat"
+      - "How the fuck did &3%player%&4 die to a Bat"
     Bee:
       - "&3%player%&4 was stung to death"
     BlazeMelee:
@@ -251,6 +252,7 @@ death-messages:
       - "&3%player%&4 was slain by Dolphin"
     Donkey:
       - "&3%player%&4 was slain by Donkey"
+      - "&3%player%&4 died to a duper animal"
     DrownedMelee:
       - "&3%player%&4 was slain by Drowned"
     DrownedTrident:
@@ -307,6 +309,7 @@ death-messages:
       - "&3%player%&4 was slain by Phantom"
     Pig:
       - "&3%player%&4 was slain by Pig"
+      - "A Pig turned &3%player%&4 into bacon"
     PiglinMelee:
       - "&3%player%&4 was slain by Piglin"
     PiglinCustom:
@@ -636,6 +639,7 @@ death-messages:
       - "&3%player%&4 was blown up by &3%killer%&4"
     WitherSkull:
       - "&3%player%&4 was shot by a &3%killer%&4's skull"
+      - "&3%killer%&4's skull shot &3%player%&4" 
     EnderCrystalKill:
       - "&3%player%&4 experienced &3%killer%’s&4 &6end crystal"
       - "&3%player%&4 was force fed &6an end crystal &4by &3%killer%&4"
@@ -650,6 +654,7 @@ death-messages:
       - "&3%player%&4 was destroyed by &3%killer%&4 with &6an end crystal"
       - "&3%player%&4 was violently assassainated by &3%killer%&4 with &6an end crystal"
       - "&3%player%&4 just deepthroated &3%killer%’s&4 &6end crystal"
+      - "&3%killer%&4 made &3%player%&4 eat &6end crystal"
     EnderCrystalSuicide:
       - "&3%player%&4 just went kaboom with &6an end crystal"
       - "&3%player%&4 killed themselves with &6an end crystal"
@@ -658,25 +663,30 @@ death-messages:
       - "&3%player%&4 blew themselves up with &6an end crystal"
       - "&3%player%&4 exploded themselves up with &6an end crystal"
       - "&3%player%&4 suffered from a huge fucking config issue with &6an end crystal"
+      - "&6end crystal made &3%player%&4 kill themself"
     Bed: # exploding beds or respawn anchors
       - "&3%player%&4 was killed by &6Intentional Game Design"
       - "&3%player%&4 just went kaboom with &6Intentional Game Design"
       - "&3%player%&4 got fucked by &6Intentional Game Design"
       - "&3%player%&4 foreskin was blown off by &6Intentional Game Design"
+      - "&3%player%&4 didn't sleep in the overworld"
     Cactus:
       - "&3%player%&4 was pricked to death"
       - "&3%player%&4 took a cactus up the ass"
       - "&3%player%&4 failed to cactus dupe"
     CactusKill:
       - "&3%player%&4 walked into a cactus whilst trying to escape &3%killer%&4"
+      - "&3%player%&4 got pricked to death by a cactus and failed to escape &3%killer%&4"
     Anvil:
       - "&3%player%&4 was squashed to death by &6Anvil"
+      - "&3%player%&4 squished themselves against &6Anvil and died"
     AnvilKill:
       - "&3%player%&4 was squashed to death by &6Anvil"
     FallingBlock: # Only when a FallingBlock is modified to cause damage
       - "&3%player%&4 was squashed to death by a falling block"
     FallingBlockKill: # as above
       - "&3%player%&4 was squashed to death by a falling block"
+      - "&3%player%&4 suffocated to a falling block" 
     UnknownArrow: # arrow from unknown entity or source, /summon?
       - "&3%player%&4 was shot by arrow"
     DispenserArrow:
@@ -698,6 +708,7 @@ death-messages:
       - "&3%player%&4 drank themselves dead whilst trying to escape &3%killer%&4"
       - "&3%player%&4 suffocated in water whilst trying to escape &3%killer%&4"
       - "&3%player%&4 forgot to breathe whilst running away from &3%killer%&4"
+      - "&3%killer%&4 held &3%player%&4 underwater too long"
     PotionPoison: # Normally impossible
       - "&3%player%&4 died"
     PotionWither:
@@ -776,6 +787,7 @@ death-messages:
       - "&3%player%&4 fell while climbing"
     FallWater: 
       - "&3%player%&4 fell out of the water"
+      - "&3%player%&4 tripped and fell out of water"
     FallTrapdoor: 
       - "&3%player%&4 fell out a trapdoor"
     FallScaffolding: 
@@ -805,6 +817,7 @@ death-messages:
       - "&3%player%&4 went off with a bang"
     FireworkKill: 
       - "&3%player%&4 went off with a bang whilst fighting &3%killer%&4"
+      - "&3%killer%&4 made 3%player%&4 go bang"
     CrossbowFirework: 
       - "&3%player%&4 went off with a bang due to a firework fired by &3%killer%&4"
     CrossbowFireworkCustom: 
@@ -815,6 +828,7 @@ death-messages:
     ElytraKill: 
       - "&3%player%&4 experienced kinetic energy whilst trying to escape &3%killer%&4"
       - "&3%player%&4 smashed themselves and died trying to escape &3%killer%&4"
+      - "&3%killer%&4 somehow used an elytra to kill &3%player%&4"
     Suicide: # Some plugins may use this one, /suicide and /kill for example
       - "&3%player%&4 killed themselves"
       - "&3%player%&4 gave up on life"
