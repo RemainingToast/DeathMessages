@@ -1,5 +1,12 @@
 package com.au2b2t.deathmessages;
 
+import com.au2b2t.deathmessages.events.DMPReloadEvent;
+import com.au2b2t.deathmessages.listeners.DeathListener;
+import com.au2b2t.deathmessages.listeners.DeathMessageTagListener;
+import com.au2b2t.deathmessages.util.config.Config;
+import com.au2b2t.deathmessages.util.ConfigTooOldException;
+import com.au2b2t.deathmessages.util.ConfigUpdater;
+import lombok.Getter;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -7,10 +14,8 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.InvalidConfigurationException;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventPriority;
-import org.bukkit.event.Listener;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -49,12 +54,17 @@ import java.util.*;
  * 
  */
 
-public class DeathMessages extends JavaPlugin implements TabCompleter
-{
+// ok - toast
+
+public class DeathMessages extends JavaPlugin implements TabCompleter {
+
     public final int CONFIG_VERSION = 55;
+
+    @Getter
+    Config config;
     
     boolean debug;
-    FileConfiguration config;
+//    FileConfiguration config;
     /* World names of worlds in which PvP messages are hidden */
     List<String> pl;
     /* World names of worlds in which non-PvP messages are hidden */
@@ -88,23 +98,12 @@ public class DeathMessages extends JavaPlugin implements TabCompleter
         this.pnl = null;
     }
 
-    private static int mc_ver = 0;
-    private static int mc_rev = 0;
-    
-    public static boolean mcVer(int comp) {
-        return mc_ver >= comp;
-    }
-
-    public static boolean mcVerRev(int comp, int rev) {
-        return mc_ver > comp || (mc_ver == comp && mc_rev >= rev);
-    }
-    
     public void onEnable() {
         (DeathMessages.instance = this).loadConfig();
-        taglisteners = new HashMap<String, DeathMessageTagListener>();
-        taglistenerprefixes = new HashMap<String, DeathMessageTagListener>();
+        taglisteners = new HashMap<>();
+        taglistenerprefixes = new HashMap<>();
         dl = new DeathListener(this, this.config);
-        Bukkit.getPluginManager().registerEvents((Listener)dl, (Plugin)this);
+        Bukkit.getPluginManager().registerEvents(dl, (Plugin)this);
         try {
             dl.pr = EventPriority.valueOf(this.config.getString("death-listener-priority"));
         } catch (Exception ex) {
@@ -116,37 +115,8 @@ public class DeathMessages extends JavaPlugin implements TabCompleter
             // will however lead to undefined behavior, which is why it cannot be recommended
             this.getLogger().warning("You are using MONITOR as the DMP priority; this is not supported. Please switch to another priority.");
         }
-        String ver = Bukkit.getServer().getVersion().split("\\(MC:")[1].split("\\)")[0].trim().split(" ")[0].trim();
-        this.getLogger().info("Minecraft version is " + ver);
+
         getCommand("dmsg").setTabCompleter(this);
-        try {
-            String[] tokens = ver.split("\\.");
-            int mcMajor = Integer.parseInt(tokens[0]);
-            int mcMinor = 0;
-            int mcRevision = 0;
-            if (tokens.length > 1) {
-                mcMinor = Integer.parseInt(tokens[1]);
-            }
-            if (tokens.length > 2) {
-                mcRevision = Integer.parseInt(tokens[2]);
-            }
-            mc_ver = mcMajor * 1000 + mcMinor;
-            mc_rev = mcRevision;
-            // 1.8 = 1_008
-            // 1.9 = 1_009
-            // 1.10 = 1_010
-            // ...
-            // 1.14 = 1_014
-            // 1.15 = 1_015
-        } catch (Exception ex) {
-            this.getLogger().warning("Cannot detect Minecraft version from string - " +
-                                     "some features will not work properly. " + 
-                                     "Please contact the plugin author if you are on " +
-                                     "standard CraftBukkit or Spigot. This plugin " + 
-                                     "expects getVersion() to return a string " + 
-                                     "containing '(MC: 1.15)' or similar. The version " + 
-                                     "DMP tried to parse was '" + ver + "'");
-        }
     }
     
     private void loadConfig() {

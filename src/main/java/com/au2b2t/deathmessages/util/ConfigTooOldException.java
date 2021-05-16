@@ -1,4 +1,4 @@
-package com.au2b2t.deathmessages;
+package com.au2b2t.deathmessages.util;
 
 /**
  * Placeholder exception for detecting old configurations

@@ -1,4 +1,4 @@
-package com.au2b2t.deathmessages;
+package com.au2b2t.deathmessages.util;
 
 import java.util.HashMap;
 

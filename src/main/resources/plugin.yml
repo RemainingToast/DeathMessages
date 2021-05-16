@@ -9,6 +9,7 @@ commands:
     usage: /<command> [reload | uuid playername]
   toggledeathmsg:
     description: Toggle whether death messages are visible, does not persist over restarts.
+    aliases: ["toggledeathmsgs"]
     usage: /<command>
 permissions:
   deathmessagesprime.*:

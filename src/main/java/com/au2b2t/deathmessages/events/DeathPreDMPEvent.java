@@ -1,4 +1,4 @@
-package com.au2b2t.deathmessages;
+package com.au2b2t.deathmessages.events;
 
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;

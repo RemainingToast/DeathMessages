@@ -1,4 +1,4 @@
-package com.au2b2t.deathmessages;
+package com.au2b2t.deathmessages.events;
 
 import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.entity.Player;
