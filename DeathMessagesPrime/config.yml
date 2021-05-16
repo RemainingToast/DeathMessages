@@ -681,6 +681,7 @@ death-messages:
       - "&3%player%&4 was shot by arrow"
     DispenserArrow:
       - "&3%player%&4 was shot by arrow"
+      - "&3%player%&4 was shot in the knee and died"
     DispenserFireball:
       - "&3%player%&4 burned to death"
     DispenserSnowball:
@@ -688,14 +689,13 @@ death-messages:
     Drowning:
       - "&3%player%&4 drowned"
       - "&3%player%&4 went swimming with the fishes"
-      - "&3%player%&4 forgot to breath air"
+      - "&3%player%&4 forgot to breathe"
       - "&3%player%&4 drank themselves dead"
       - "&3%player%&4 suffocated in water"
     DrowningKill:
       - "&3%player%&4 drowned whilst trying to escape &3%killer%&4"
       - "&3%player%&4 went swimming with the fishes whilst trying to escape &3%killer%&4"
       - "&3%player%&4 drank themselves dead whilst trying to escape &3%killer%&4"
-      - "&3%player%&4 forgot to breath air whilst trying to escape &3%killer%&4"
       - "&3%player%&4 suffocated in water whilst trying to escape &3%killer%&4"
       - "&3%player%&4 forgot to breathe whilst running away from &3%killer%&4"
     PotionPoison: # Normally impossible
