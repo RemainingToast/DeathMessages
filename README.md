@@ -1,13 +1,10 @@
 
 # Death Messages
 
-*Note: I use DeathMessagesPrime before the rewrite and new developer you can find the new plugin [here](https://www.spigotmc.org/resources/deathmessages-deathmessagesprime-remastered.3789/).*   
+***This is my own fork of [DeathMessagesPrime](https://github.com/CosmoConsole/DeathMessagesPrime)***
 
-***I do this because the new plugin has:***
-- ***Completely rewritten config***
-- ***Too Many New Features (ALOT I don't need)***  
-
-***So for now till I write my own I'll use the old DeathMessagesPrime.***
+### Features
+ - Identical as the Death Messages on 2b2t.org 
 
 # Contributions
 
