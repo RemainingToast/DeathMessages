@@ -2,20 +2,20 @@
 #    .   .   .. ..   .   .
 #   .   .   . . .   ....
 #  .   .   .   .   .
-# ....    .   .   .
+# ....    .   .   .      
 # DeathMessagesPrime Configuration File
 # SAVE THIS FILE AS UTF-8!!!! (without BOM)
 # Your text editor should support it. (Windows Notepad does probably not work)
 
-# Configuration version, do not change this unless you want your config to be
+# Configuration version, do not change this unless you want your config to be 
 # reset.
 config-version: 55
 
 # World groups.
-# If a world is in a group, and a death occurs there, the appropriate death
+# If a world is in a group, and a death occurs there, the appropriate death 
 # message will be shown in rest of the worlds in that same group too.
-#
-# If _enabled is false, this feature is disabled. Instead, the death message
+# 
+# If _enabled is false, this feature is disabled. Instead, the death message 
 # behavior will be specified with per-world-messages.
 #
 # per-world-messages must be enabled to make world-groups work!
@@ -25,26 +25,26 @@ world-groups:
     - world
     - world_nether
     - world_the_end
-
+  
 # Following players will never have visible death messages.
-# ENTER UUIDs UNDER THIS LIST. To get an UUID of an online player, use
-# /dmsg uuid player_name.
+# ENTER UUIDs UNDER THIS LIST. To get an UUID of an online player, use  
+# /dmsg uuid player_name.  
 # Default: (empty)
-player-blacklist:
+player-blacklist: 
 # - '00000000-0000-0000-0000-000000000000'
-
+  
 # List worlds, where death messages from PvP are not recorded, here.
 # Default: (empty)
 worlds-no-pvp-death-messages:
-  - - world2
+- - world2
 
-# List worlds, where death messages from anything else than PvP are not
+# List worlds, where death messages from anything else than PvP are not 
 # recorded, here.
 # Default: (empty)
 worlds-no-natural-death-messages:
 # - world2
 
-# List worlds, where death messages are only shown to the killer and the
+# List worlds, where death messages are only shown to the killer and the 
 # victim, here.
 # Default: (empty)
 worlds-private-pvp-death-messages:
@@ -55,12 +55,12 @@ worlds-private-pvp-death-messages:
 worlds-private-natural-death-messages:
 # - world3
 
-# Worlds with maximum radius (in blocks) for death messages, assumed infinite
+# Worlds with maximum radius (in blocks) for death messages, assumed infinite 
 # if world is not present.
-# Should a world have a death message radius, the messages will never be shown
+# Should a world have a death message radius, the messages will never be shown 
 # to players in any other world.
 worlds-death-message-radius:
-#world: 10
+    #world: 10 
 
 # Similar to the above, but this only controls PVP messages (not natural
 # death messages). If both are set, the above worlds-death-message-radius
@@ -69,8 +69,8 @@ worlds-death-message-radius:
 # In order to only have a natural message radius: add the world under
 #          both options and set it to -1 here.
 worlds-pvp-death-message-radius:
-#world: 10
-
+    #world: 10 
+    
 # If a player dies over death-count times within death-interval seconds,
 # death messages from that player will be hidden for death-cooldown seconds.
 # If death-reset is true, every hidden death message resets the cooldown.
@@ -83,12 +83,12 @@ cooldown-death-cooldown: 10
 # Default: false
 cooldown-death-reset: false
 
-# Show debug information upon death, useful for determining plugin conflicts,
+# Show debug information upon death, useful for determining plugin conflicts, 
 # etc.
 # Default: false
 debug: false
 
-# Show death messages in all worlds, if false. Needs to be true in order to
+# Show death messages in all worlds, if false. Needs to be true in order to 
 # worldgroups to function.
 # Default: true
 per-world-messages: true
@@ -113,7 +113,7 @@ death-message-enable-namedmob: true
 # (This affects the text colors and formatting for some items, such
 # as enchanted ones.)
 # Default: true
-death-message-show-rarity: false
+death-message-show-rarity: true
 
 # Allows applying item flags on items that appear in death messages.
 # Note that this feature only works on Minecraft 1.8 and above.
@@ -122,17 +122,17 @@ death-message-item-flags:
 # - HIDE_ATTRIBUTES
 # - HIDE_ENCHANTS
 
-# Heart compatibility mode: use mob instead of namedmob when the mob name
+# Heart compatibility mode: use mob instead of namedmob when the mob name 
 # contains heart characters.
 # Designed for mob health bar plugins, et cetera.
-# Enable this if death messages have mob names be a row of hearts representing
+# Enable this if death messages have mob names be a row of hearts representing 
 # health.
 # Default: false
 heart-compat-mode: false
 
-# If the mob name contains any of the following characters and
-# heart-compat-mode is enabled, the default mob name is displayed. You can add
-# characters if the health bar is still visible (copy the character from the
+# If the mob name contains any of the following characters and 
+# heart-compat-mode is enabled, the default mob name is displayed. You can add 
+# characters if the health bar is still visible (copy the character from the 
 # death message logs) or remove them at will.
 heart-characters: "♡♥❤■"
 
@@ -144,22 +144,22 @@ heart-characters: "♡♥❤■"
 # Default: normal
 console-death-message: normal
 
-# Clean prefix/suffix from messages printed in the console,
+# Clean prefix/suffix from messages printed in the console, 
 # ignored if console-death-message is not normal
 # Default: false
 console-death-message-strip-prefix: false
 
-# Clean color codes from messages printed in the console,
+# Clean color codes from messages printed in the console, 
 # ignored if console-death-message is not normal
 # Default: false
 console-death-message-strip-colors: false
 
 # Displays the death message in the console even if the world has disabled
-# death messages or set them to private.
+# death messages or set them to private. 
 # Default: true
 console-death-message-even-if-disabled: true
 
-# The priority for the listener. Set to lower value if there are any conflicts
+# The priority for the listener. Set to lower value if there are any conflicts 
 # with plugins that provide their own death message systems.
 # In order from higher to lower: HIGHEST, HIGH, NORMAL, LOW, LOWEST
 # MONITOR is UNSUPPORTED - do not use it, as it causes conflicts and may
@@ -191,14 +191,14 @@ players-only-command: "§cOnly players can run this command."
 reload-complete: "Reload complete!"
 cannot-find-online-player: "Cannot find online player"
 
-# Here are the actual death messages. They are as a list, so you can add as
-# many as you want, and the plugin will support it. Color codes in format &0-&f
+# Here are the actual death messages. They are as a list, so you can add as 
+# many as you want, and the plugin will support it. Color codes in format &0-&f 
 # and &k-&r are supported.
 #
 # %player% represents the player's name.
 # %name% represents the player's display name.
-# %killer% represents the killer player (in PvP reasons), or
-#          pursuing mob (in DrowningMob etc. reasons) (mob names can be
+# %killer% represents the killer player (in PvP reasons), or 
+#          pursuing mob (in DrowningMob etc. reasons) (mob names can be 
 #          changed in mob-names section).
 # %killer2% represents the killer player's display name in PvP reasons only.
 # %player% represents the dead player's username with entity tooltip.
@@ -207,7 +207,7 @@ cannot-find-online-player: "Cannot find online player"
 # %weapon_name% represents the weapon name.
 # %weapon% represents the weapon name (including the tooltip).
 # %world% represents the world name of the death.
-# %biome% represents the biome, where the death occurred.
+# %biome% represents the biome, where the death occurred. 
 # %x%, %y% and %z% represents the player death coordinates.
 # %distance% represents the distance between the player and the killer
 #            in blocks (if applicable)
@@ -216,11 +216,11 @@ cannot-find-online-player: "Cannot find online player"
 #
 # Death messages for being killed by normally peaceful mobs also exist,
 # designed for custom maps, plugins or mods which may change functionality.
-death-messages:
+death-messages: 
   # Prefix of all death messages
-  prefix: ""
+  prefix: "" 
   # Suffix of all death messages
-  suffix: ""
+  suffix: "" 
   # If you want a prefix / suffix only for PVP messages, uncomment these:
   # prefix-pvp: "&a[&eD&a] &c"
   # suffix-pvp: ""
@@ -639,7 +639,7 @@ death-messages:
       - "&3%player%&4 was blown up by &3%killer%&4"
     WitherSkull:
       - "&3%player%&4 was shot by a &3%killer%&4's skull"
-      - "&3%killer%&4's skull shot &3%player%&4"
+      - "&3%killer%&4's skull shot &3%player%&4" 
     EnderCrystalKill:
       - "&3%player%&4 experienced &3%killer%’s&4 &6end crystal"
       - "&3%player%&4 was force fed &6an end crystal &4by &3%killer%&4"
@@ -663,7 +663,7 @@ death-messages:
       - "&3%player%&4 blew themselves up with &6an end crystal"
       - "&3%player%&4 exploded themselves up with &6an end crystal"
       - "&3%player%&4 suffered from a huge fucking config issue with &6an end crystal"
-      - "&6end crystal made &3%player%&4 kill themself"
+      - "&4A &6End crystal&4 made &3%player%&4 kill themselves"
     Bed: # exploding beds or respawn anchors
       - "&3%player%&4 was killed by &6Intentional Game Design"
       - "&3%player%&4 just went kaboom with &6Intentional Game Design"
@@ -686,7 +686,7 @@ death-messages:
       - "&3%player%&4 was squashed to death by a falling block"
     FallingBlockKill: # as above
       - "&3%player%&4 was squashed to death by a falling block"
-      - "&3%player%&4 suffocated to a falling block"
+      - "&3%player%&4 suffocated to a falling block" 
     UnknownArrow: # arrow from unknown entity or source, /summon?
       - "&3%player%&4 was shot by arrow"
     DispenserArrow:
@@ -775,28 +775,28 @@ death-messages:
       - "&3%player%&4 broke their neck, and the rest of their body."
       - "&3%player%&4 massacared themselves on the ground."
       - "&3%player%&4 didn't survive the fall. themselves on the ground."
-    FallLadder:
+    FallLadder: 
       - "&3%player%&4 dropped off a ladder"
-    FallVine:
+    FallVine: 
       - "&3%player%&4 fell off some vines"
-    FallWeepingVine:
+    FallWeepingVine: 
       - "&3%player%&4 fell off some weeping vines"
-    FallTwistingVine:
+    FallTwistingVine: 
       - "&3%player%&4 fell off some twisting vines"
-    FallClimbing: # currently unused
+    FallClimbing: # currently unused 
       - "&3%player%&4 fell while climbing"
-    FallWater:
+    FallWater: 
       - "&3%player%&4 fell out of the water"
       - "&3%player%&4 tripped and fell out of water"
-    FallTrapdoor:
+    FallTrapdoor: 
       - "&3%player%&4 fell out a trapdoor"
-    FallScaffolding:
+    FallScaffolding: 
       - "&3%player%&4 fell out scaffolding"
-    FallFire:
+    FallFire: 
       - "&3%player%&4 fell into a patch of fire"
-    FallCacti:
+    FallCacti: 
       - "&3%player%&4 fell into a patch of cacti"
-    FallBerryBush:
+    FallBerryBush: 
       - "&3%player%&4 fell into a sweet berry bush"
     FallKill:
       - "&3%player%&4 was doomed to fall by &3%killer%&4"
@@ -809,23 +809,23 @@ death-messages:
       - "&3%player%&4 fell too far and was finished by &3%killer%&4 using &6%weapon_name%&4"
     FallExplosionKill: # FallKill caused by entity explosion
       - "&3%player%&4 was blown from a high place by &3%killer%&4"
-    FallLadderKill:
+    FallLadderKill: 
       - "&3%player%&4 was shot off a ladder by &3%killer%&4"
-    FallVineKill:
+    FallVineKill: 
       - "&3%player%&4 was shot off some vines by &3%killer%&4"
-    Firework:
+    Firework: 
       - "&3%player%&4 went off with a bang"
-    FireworkKill:
+    FireworkKill: 
       - "&3%player%&4 went off with a bang whilst fighting &3%killer%&4"
       - "&3%killer%&4 made 3%player%&4 go bang"
-    CrossbowFirework:
+    CrossbowFirework: 
       - "&3%player%&4 went off with a bang due to a firework fired by &3%killer%&4"
-    CrossbowFireworkCustom:
+    CrossbowFireworkCustom: 
       - "&3%player%&4 went off with a bang due to a firework fired from &6%weapon_name%&4 by &3%killer%&4"
-    Elytra:
+    Elytra: 
       - "&3%player%&4 experienced kinetic energy"
       - "&3%player%&4 smashed themselves and died trying to fly with elytra."
-    ElytraKill:
+    ElytraKill: 
       - "&3%player%&4 experienced kinetic energy whilst trying to escape &3%killer%&4"
       - "&3%player%&4 smashed themselves and died trying to escape &3%killer%&4"
       - "&3%killer%&4 somehow used an elytra to kill &3%player%&4"
@@ -838,14 +838,14 @@ death-messages:
       - "&3%player%&4 killed themselves"
     Custom: # Some plugins may use this one
       - "&3%player%&4 killed themselves"
-  unknown:
+  unknown: 
     - "&3%player%&4 killed themselves"
-      # if any custom plugins offer custom messages, add them below.
-      # for example: for tag "foo.bar", use
-      # foo:
-      #   bar:
-      #     - "foo.bar death message"
-
+  # if any custom plugins offer custom messages, add them below.
+  # for example: for tag "foo.bar", use
+  # foo:
+  #   bar:
+  #     - "foo.bar death message"
+     
 mob-names:
   Bat: "Bat"
   Bee: "Bee"
@@ -920,22 +920,22 @@ mob-names:
   ZombieVillager: "Zombie Villager"
 
 item-names:
-# Use this section to provide custom translations for items when used in a
-# death message to replace %weapon_name% or %weapon_name%.
-# See list of options here:
-#   https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html.
-#   (these may change depending on the Minecraft version)
-# Example:
-# IRON_SWORD: "Iron Sword"
+  # Use this section to provide custom translations for items when used in a
+  # death message to replace %weapon_name% or %weapon_name%.
+  # See list of options here:
+  #   https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html.
+  #   (these may change depending on the Minecraft version)
+  # Example:
+  # IRON_SWORD: "Iron Sword"
 
 custom-mob-death-messages:
-  # The following attribute takes in regular expressions and checks top-down
+  # The following attribute takes in regular expressions and checks top-down 
   # whether the names of the mobs match them.
-  # If there is no list, as in [], the plugin will look up the message from
+  # If there is no list, as in [], the plugin will look up the message from 
   # the normal death messages.
-  # If the list only has an empty message, the death message for that mob will
+  # If the list only has an empty message, the death message for that mob will 
   # be hidden.
-  # To match color codes, use the § character instead of &. (This file must be
+  # To match color codes, use the § character instead of &. (This file must be 
   # encoded in UTF-8)
   # Examples:
   #
@@ -945,14 +945,14 @@ custom-mob-death-messages:
   # "^[Ss]_*": # match all mobs beginning with S or s
   #   - "%player% was killed by a mob"
   #
-  # "§cMy Custom Boss": [] # display normal messages for mobs named
+  # "§cMy Custom Boss": [] # display normal messages for mobs named 
   #                        # 'My Custom Boss' written in red
   #
   # "My Custom Boss": # match all mobs with name being 'My Custom Boss'
   #   - "%player% was killed by a boss"
   #   - "%player% was pummeled by a boss"
   #
-  # "§aMy Custom Boss": # match all mobs with name being 'My Custom Boss'
+  # "§aMy Custom Boss": # match all mobs with name being 'My Custom Boss' 
   #                     # written in light green
   #   - "%player% was killed by a boss"
   #   - "%player% was pummeled by a boss"
@@ -999,7 +999,7 @@ custom-mob-death-messages:
 custom-user-death-messages:
   # Same deal here. The plugin checks from the actual user names of players.
   # custom-user-death-messages is preferred over custom-player-death-messages:
-  # empty list here will pass to custom-player-death-messages before passing
+  # empty list here will pass to custom-player-death-messages before passing 
   # through to normal death messages.
   Melee:
     "_*": []
@@ -1066,70 +1066,71 @@ custom-player-death-messages:
     "_*": []
 
 custom-biome-names:
-# See https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/block/Biome.html.
-# The key should be one from the list above, for example:
-
-# SAVANNA_ROCK: "Savanna Plateau"
-
+  # See https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/block/Biome.html.
+  # The key should be one from the list above, for example:
+  
+  # SAVANNA_ROCK: "Savanna Plateau"
+  
 custom-world-names:
-# World name as the key and display name as the value.
-
-# "world": "World #1"
-
+  # World name as the key and display name as the value.
+  
+  # "world": "World #1"
+  
 custom-messages-per-player:
-  # Add custom messages for players. Use the UUID as the key, then use a death
+  # Add custom messages for players. Use the UUID as the key, then use a death 
   # reason key with the list of messages.
   # To get the UUID of an online player, use /dmsg uuid player_name
-
+  
   # Will this override custom-mob-death-messages, custom-user-death-messages,
   # and custom-player-death-messages?
   override: true
   # also affects custom-messages-per-killer-player
-
+  
   # "123e4567-e89b-12d3-a456-426655440000":
   #   natural:
   #     TNT:
   #       - "A VIP player, %player%, blew up!"
-
+  
   # It is also possible to override all death message causes for a player:
   # "123e4567-e89b-12d3-a456-426655440000":
   #   "*":
   #     - "A VIP player, %player%, died!"
-
+  
 custom-messages-per-killer-player:
-# Same as above, but for killing players in PVP events.
-# To get the UUID of an online player, use /dmsg uuid player_name
-
-# "123e4567-e89b-12d3-a456-426655440000":
-#   natural:
-#     TNTKill:
-#       - "%player% got blown up by a VIP player, %entity%!"
-
+  # Same as above, but for killing players in PVP events.
+  # To get the UUID of an online player, use /dmsg uuid player_name
+  
+  # "123e4567-e89b-12d3-a456-426655440000":
+  #   natural:
+  #     TNTKill:
+  #       - "%player% got blown up by a VIP player, %entity%!"  
+  
 custom-messages-per-weapon-name:
-# Same as above, but for weapon names. The key is a regular expression,
-# similar to the ones used in custom-mob-death-messages (see it for more).
-
-# "Super Duper Sword_*": # all weapons with names that start with...
-#   pvp:
-#     PlayerCustom:
-#       - "%player% was slain by %killer% using the mightiest weapon of all"
-
+  # Same as above, but for weapon names. The key is a regular expression,
+  # similar to the ones used in custom-mob-death-messages (see it for more).
+  
+  # "Super Duper Sword_*": # all weapons with names that start with...
+  #   pvp:
+  #     PlayerCustom:
+  #       - "%player% was slain by %killer% using the mightiest weapon of all"
+  
 custom-messages-per-weapon-type:
-# Same as above, but for weapon types. The same keys are used
-# as in item-names.
-
-# IRON_SWORD:
-#   pvp:
-#     PlayerCustom:
-#       - "%player% was slain by %killer% using an iron sword"
-
+  # Same as above, but for weapon types. The same keys are used
+  # as in item-names.
+  
+  # IRON_SWORD:
+  #   pvp:
+  #     PlayerCustom:
+  #       - "%player% was slain by %killer% using an iron sword"
+  
 custom-messages-per-world:
-# Add custom messages for worlds. Use the world name as the key, then
-# use a death reason key with the list of messages.
-# This has lesser priority than custom-messages-per-player,
-# custom-messages-per-killer-player or others.
-
-# "world":
-#   natural:
-#     TNT:
-#       - "A player, %player%, blew up in the specific world!"
+  # Add custom messages for worlds. Use the world name as the key, then 
+  # use a death reason key with the list of messages.
+  # This has lesser priority than custom-messages-per-player,
+  # custom-messages-per-killer-player or others.
+  
+  # "world":
+  #   natural:
+  #     TNT:
+  #       - "A player, %player%, blew up in the specific world!"  
+  
