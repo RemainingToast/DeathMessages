@@ -649,7 +649,6 @@ death-messages:
       - "&3%player%&4 was utterly destroyed by &3%killer%&4 with &6an end crystal"
       - "&3%player%&4 was destroyed by &3%killer%&4 with &6an end crystal"
       - "&3%player%&4 was violently assassainated by &3%killer%&4 with &6an end crystal"
-      - "&3%player%&4 just got added to &3%killer%&4's CPVP montage with &6an end crystal"
       - "&3%player%&4 just deepthroated &3%killer%’s&4 &6end crystal"
     EnderCrystalSuicide:
       - "&3%player%&4 just went kaboom with &6an end crystal"
@@ -692,7 +691,6 @@ death-messages:
       - "&3%player%&4 forgot to breath air"
       - "&3%player%&4 drank themselves dead"
       - "&3%player%&4 suffocated in water"
-      - "&3%player%&4 forgot to breathe"
     DrowningKill:
       - "&3%player%&4 drowned whilst trying to escape &3%killer%&4"
       - "&3%player%&4 went swimming with the fishes whilst trying to escape &3%killer%&4"
