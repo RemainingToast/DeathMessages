@@ -1,0 +1,1115 @@
+#     ....    .   .   ....
+#    .   .   .. ..   .   .
+#   .   .   . . .   ....
+#  .   .   .   .   .
+# ....    .   .   .      
+# DeathMessagesPrime Configuration File
+# SAVE THIS FILE AS UTF-8!!!! (without BOM)
+# Your text editor should support it. (Windows Notepad does probably not work)
+
+# Configuration version, do not change this unless you want your config to be 
+# reset.
+config-version: 55
+
+# World groups.
+# If a world is in a group, and a death occurs there, the appropriate death 
+# message will be shown in rest of the worlds in that same group too.
+# 
+# If _enabled is false, this feature is disabled. Instead, the death message 
+# behavior will be specified with per-world-messages.
+#
+# per-world-messages must be enabled to make world-groups work!
+world-groups:
+  _enabled: true
+  world:
+    - world
+    - world_nether
+    - world_the_end
+  
+# Following players will never have visible death messages.
+# ENTER UUIDs UNDER THIS LIST. To get an UUID of an online player, use  
+# /dmsg uuid player_name.  
+# Default: (empty)
+player-blacklist: 
+# - '00000000-0000-0000-0000-000000000000'
+  
+# List worlds, where death messages from PvP are not recorded, here.
+# Default: (empty)
+worlds-no-pvp-death-messages:
+- - world2
+
+# List worlds, where death messages from anything else than PvP are not 
+# recorded, here.
+# Default: (empty)
+worlds-no-natural-death-messages:
+# - world2
+
+# List worlds, where death messages are only shown to the killer and the 
+# victim, here.
+# Default: (empty)
+worlds-private-pvp-death-messages:
+# - world3
+
+# List worlds, where death messages are only shown to the player that died here.
+# Default: (empty)
+worlds-private-natural-death-messages:
+# - world3
+
+# Worlds with maximum radius (in blocks) for death messages, assumed infinite 
+# if world is not present.
+# Should a world have a death message radius, the messages will never be shown 
+# to players in any other world.
+worlds-death-message-radius:
+    #world: 10 
+
+# Similar to the above, but this only controls PVP messages (not natural
+# death messages). If both are set, the above worlds-death-message-radius
+# will affect the natural messages and this one will affect the PVP messages.
+# In order to only have a PVP message radius: add the world here only.
+# In order to only have a natural message radius: add the world under
+#          both options and set it to -1 here.
+worlds-pvp-death-message-radius:
+    #world: 10 
+    
+# If a player dies over death-count times within death-interval seconds,
+# death messages from that player will be hidden for death-cooldown seconds.
+# If death-reset is true, every hidden death message resets the cooldown.
+# Default: 3
+cooldown-death-count: 3
+# Default: 10
+cooldown-death-interval: 10
+# Default: 10
+cooldown-death-cooldown: 10
+# Default: false
+cooldown-death-reset: false
+
+# Show debug information upon death, useful for determining plugin conflicts, 
+# etc.
+# Default: false
+debug: false
+
+# Show death messages in all worlds, if false. Needs to be true in order to 
+# worldgroups to function.
+# Default: true
+per-world-messages: true
+
+# Death message compatibility: set the message as normal, until HIGHEST,
+# when it is emptied.
+# Use this if any conflicts arise.
+# Default: true
+death-message-compat-mode: true
+
+# Whether to use DMP broadcasting if a custom death message is set by
+# another plugin.
+# Default: false
+death-message-conflict-broadcast: false
+
+# Whether to enable namedmob messages. If disabled, namedmob messages
+# will not be shown and will be replaced with mob.
+# Default: true
+death-message-enable-namedmob: true
+
+# Show the rarity of items in the %weapon_name% and %weapon_name% tags.
+# (This affects the text colors and formatting for some items, such
+# as enchanted ones.)
+# Default: true
+death-message-show-rarity: true
+
+# Allows applying item flags on items that appear in death messages.
+# Note that this feature only works on Minecraft 1.8 and above.
+# Possible flags are documented under https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/inventory/ItemFlag.html
+death-message-item-flags:
+# - HIDE_ATTRIBUTES
+# - HIDE_ENCHANTS
+
+# Heart compatibility mode: use mob instead of namedmob when the mob name 
+# contains heart characters.
+# Designed for mob health bar plugins, et cetera.
+# Enable this if death messages have mob names be a row of hearts representing 
+# health.
+# Default: false
+heart-compat-mode: false
+
+# If the mob name contains any of the following characters and 
+# heart-compat-mode is enabled, the default mob name is displayed. You can add 
+# characters if the health bar is still visible (copy the character from the 
+# death message logs) or remove them at will.
+heart-characters: "♡♥❤■"
+
+# Broadcast death message to console.
+# none: Do not print death message in console.
+# normal: Print the DeathMessagesPrime message in console.
+# verbose: Print a verbose message, including coordinates, and other info.
+# Verbose is useful for debugging
+# Default: normal
+console-death-message: normal
+
+# Clean prefix/suffix from messages printed in the console, 
+# ignored if console-death-message is not normal
+# Default: false
+console-death-message-strip-prefix: false
+
+# Clean color codes from messages printed in the console, 
+# ignored if console-death-message is not normal
+# Default: false
+console-death-message-strip-colors: false
+
+# Displays the death message in the console even if the world has disabled
+# death messages or set them to private. 
+# Default: true
+console-death-message-even-if-disabled: true
+
+# The priority for the listener. Set to lower value if there are any conflicts 
+# with plugins that provide their own death message systems.
+# In order from higher to lower: HIGHEST, HIGH, NORMAL, LOW, LOWEST
+# MONITOR is UNSUPPORTED - do not use it, as it causes conflicts and may
+# mess with plugins using the API.
+# Default: HIGH
+death-listener-priority: HIGH
+
+# Whether to show the custom weapon death messages (ZombieCustom for example)
+# on all weapons (true), or only on weapons with custom names (false).
+# Default: false
+show-custom-death-msg-on-all-weapons: false
+
+# THIS FEATURE IS NOT IMPLEMENTED RIGHT NOW, AS THE API DOES NOT SUPPORT
+# MODIFYING PET DEATH MESSAGES.
+# Whether to show death messages for tamed and named pets.
+# (true is the vanilla Minecraft behavior)
+# Default: true
+show-named-pet-death-messages: true
+
+# Messages for enabling and disabling death messages using /toggledeathmsg
+death-messages-hidden: "&6Death messages hidden"
+death-messages-shown: "&6Death messages unhidden"
+
+# Whether to include the standard DMP prefix for the command replies below
+dmp-prefix-in-command-messages: false
+# Messages for other commands
+no-permission: "§cYou have no permission to run this command."
+players-only-command: "§cOnly players can run this command."
+reload-complete: "Reload complete!"
+cannot-find-online-player: "Cannot find online player"
+
+# Here are the actual death messages. They are as a list, so you can add as 
+# many as you want, and the plugin will support it. Color codes in format &0-&f 
+# and &k-&r are supported.
+#
+# %player% represents the player's name.
+# %name% represents the player's display name.
+# %killer% represents the killer player (in PvP reasons), or 
+#          pursuing mob (in DrowningMob etc. reasons) (mob names can be 
+#          changed in mob-names section).
+# %killer2% represents the killer player's display name in PvP reasons only.
+# %player% represents the dead player's username with entity tooltip.
+# %victim% represents the dead player's display name with entity tooltip.
+# %entity% represents the killer's display name with entity tooltip.
+# %weapon_name% represents the weapon name.
+# %weapon% represents the weapon name (including the tooltip).
+# %world% represents the world name of the death.
+# %biome% represents the biome, where the death occurred. 
+# %x%, %y% and %z% represents the player death coordinates.
+# %distance% represents the distance between the player and the killer
+#            in blocks (if applicable)
+# %playerxp%, %playerlevel% represent the XP and level of the player.
+# %killerxp%, %killerlevel% are same for a killing *player*.
+#
+# Death messages for being killed by normally peaceful mobs also exist,
+# designed for custom maps, plugins or mods which may change functionality.
+death-messages: 
+  # Prefix of all death messages
+  prefix: "" 
+  # Suffix of all death messages
+  suffix: "" 
+  # If you want a prefix / suffix only for PVP messages, uncomment these:
+  # prefix-pvp: "&a[&eD&a] &c"
+  # suffix-pvp: ""
+  mob:
+    Bat:
+      - "&3%player%&4 was slain by Bat"
+    Bee:
+      - "&3%player%&4 was stung to death"
+    BlazeMelee:
+      - "&3%player%&4 was slain by Blaze"
+    BlazeFireball:
+      - "&3%player%&4 was fireballed by Blaze"
+    Cat:
+      - "&3%player%&4 was slain by Cat"
+    CaveSpider:
+      - "&3%player%&4 was slain by Cave Spider"
+    Chicken:
+      - "&3%player%&4 was slain by Chicken"
+    Cod:
+      - "&3%player%&4 was slain by Cod"
+    Cow:
+      - "&3%player%&4 was slain by Cow"
+    Creeper:
+      - "&3%player%&4 was blown up by Creeper"
+    CreeperCharged: # charged Creeper
+      - "&3%player%&4 was blown up by Creeper"
+    Dolphin:
+      - "&3%player%&4 was slain by Dolphin"
+    Donkey:
+      - "&3%player%&4 was slain by Donkey"
+    DrownedMelee:
+      - "&3%player%&4 was slain by Drowned"
+    DrownedTrident:
+      - "&3%player%&4 was impaled by Drowned"
+    DrownedMeleeCustom:
+      - "&3%player%&4 was slain by Drowned using &6%weapon_name%&4"
+    DrownedTridentCustom:
+      - "&3%player%&4 was impaled by Drowned using &6%weapon_name%&4"
+    ElderGuardian:
+      - "&3%player%&4 was slain by Elder Guardian"
+    EnderDragon:
+      - "&3%player%&4 was slain by Ender Dragon"
+    EnderDragonBreath:
+      - "&3%player%&4 was roasted in dragon breath"
+    Enderman:
+      - "&3%player%&4 was slain by Enderman"
+    Endermite:
+      - "&3%player%&4 was slain by Endermite"
+    Evoker:
+      - "&3%player%&4 was slain by Evoker"
+    Fox:
+      - "&3%player%&4 was slain by Fox"
+    Ghast:
+      - "&3%player%&4 was fireballed by Ghast"
+    Giant:
+      - "&3%player%&4 was slain by Giant"
+    Guardian:
+      - "&3%player%&4 was slain by Guardian"
+    Hoglin:
+      - "&3%player%&4 was slain by Hoglin"
+    Horse:
+      - "&3%player%&4 was slain by Horse"
+    HuskMelee:
+      - "&3%player%&4 was slain by Husk"
+    HuskCustom:
+      - "&3%player%&4 was slain by Husk using &6%weapon_name%&4"
+    Illusioner:
+      - "&3%player%&4 was shot by Illusioner"
+    IronGolem:
+      - "&3%player%&4 was slain by Iron Golem"
+    Llama:
+      - "&3%player%&4 was slain by Llama"
+    MagmaCube:
+      - "&3%player%&4 was slain by Magma Cube"
+    Mooshroom:
+      - "&3%player%&4 was slain by Mooshroom"
+    Mule:
+      - "&3%player%&4 was slain by Mule"
+    Panda:
+      - "&3%player%&4 was slain by Panda"
+    Parrot:
+      - "&3%player%&4 was slain by Parrot"
+    Phantom:
+      - "&3%player%&4 was slain by Phantom"
+    Pig:
+      - "&3%player%&4 was slain by Pig"
+    PiglinMelee:
+      - "&3%player%&4 was slain by Piglin"
+    PiglinCustom:
+      - "&3%player%&4 was slain by Piglin using &6%weapon_name%&4"
+    PiglinBruteMelee:
+      - "&3%player%&4 was slain by Piglin Brute"
+    PiglinBruteCustom:
+      - "&3%player%&4 was slain by Piglin Brute using &6%weapon_name%&4"
+    PillagerArrow:
+      - "&3%player%&4 was shot by Pillager"
+    PillagerMelee:
+      - "&3%player%&4 was slain by Pillager"
+    PillagerArrowCustom:
+      - "&3%player%&4 was shot by Pillager using &6%weapon_name%&4"
+    PillagerCustom:
+      - "&3%player%&4 was slain by Pillager using &6%weapon_name%&4"
+    PolarBear:
+      - "&3%player%&4 was slain by Polar Bear"
+    PufferFish:
+      - "&3%player%&4 was slain by Puffer Fish"
+    Rabbit:
+      - "&3%player%&4 was slain by Rabbit"
+    Ravager:
+      - "&3%player%&4 was slain by Ravager"
+    Salmon:
+      - "&3%player%&4 was slain by Salmon"
+    Sheep:
+      - "&3%player%&4 was slain by Sheep"
+    Shulker:
+      - "&3%player%&4 was slain by Shulker"
+    Silverfish:
+      - "&3%player%&4 was slain by Silverfish"
+    SkeletonArrow:
+      - "&3%player%&4 was shot by Skeleton"
+    SkeletonArrowCustom:
+      - "&3%player%&4 was shot by Skeleton using &6%weapon_name%&4"
+    SkeletonMelee:
+      - "&3%player%&4 was slain by Skeleton"
+    SkeletonCustom:
+      - "&3%player%&4 was slain by Skeleton using &6%weapon_name%&4"
+    SkeletonHorse:
+      - "&3%player%&4 was slain by Skeleton Horse"
+    Slime:
+      - "&3%player%&4 was slain by Slime"
+    SnowGolem:
+      - "&3%player%&4 was pummeled by Snow Golem"
+    Spider:
+      - "&3%player%&4 was slain by Spider"
+    Squid:
+      - "&3%player%&4 was slain by Squid"
+    StrayArrow:
+      - "&3%player%&4 was shot by Stray"
+    StrayMelee:
+      - "&3%player%&4 was slain by Stray"
+    StrayCustom:
+      - "&3%player%&4 was slain by Stray using &6%weapon_name%&4"
+    Strider:
+      - "&3%player%&4 was slain by Strider"
+    TropicalFish:
+      - "&3%player%&4 was slain by Tropical Fish"
+    Turtle:
+      - "&3%player%&4 was slain by Turtle"
+    Vex:
+      - "&3%player%&4 was slain by Vex"
+    Vindicator:
+      - "&3%player%&4 was slain by Vindicator"
+    WanderingTrader:
+      - "&3%player%&4 was slain by Wandering Trader"
+    Witch:
+      - "&3%player%&4 was killed by Witch using magic"
+    Wither:
+      - "&3%player%&4 was slain by &6Wither"
+      - "&3%player%&4 was buttfucked by &6Wither"
+      - "&3%player%&4 was got massacared by &6Wither"
+      - "&3%player%&4 was slapped around by &6Wither"
+      - "&3%player%&4 was pummeled into multiple parts by &6Wither"
+    WitherSpawnBoom: # Dies from wither spawn explosion
+      - "&3%player%&4 was blown up by Wither"
+    WitherSkeletonMelee:
+      - "&3%player%&4 was slain by Wither Skeleton"
+    WitherSkeletonCustom:
+      - "&3%player%&4 was slain by Wither Skeleton using &6%weapon_name%&4"
+    Wolf:
+      - "&3%player%&4 was slain by Wolf"
+    Zoglin:
+      - "&3%player%&4 was slain by Zoglin"
+    ZombieMelee:
+      - "&3%player%&4 was slain by Zombie"
+    ZombieCustom:
+      - "&3%player%&4 was slain by Zombie using &6%weapon_name%&4"
+    ZombiePigManMelee: # used in versions older than 1.16
+      - "&3%player%&4 was slain by Zombie Pigman"
+    ZombiePigManCustom: # used in versions older than 1.16
+      - "&3%player%&4 was slain by Zombie Pigman using &6%weapon_name%&4"
+    ZombifiedPiglinMelee: # used in 1.16 and newer
+      - "&3%player%&4 was slain by Zombified Piglin"
+    ZombifiedPiglinCustom: # used in 1.16 and newer
+      - "&3%player%&4 was slain by Zombified Piglin using &6%weapon_name%&4"
+    ZombieVillagerMelee:
+      - "&3%player%&4 was slain by Zombie Villager"
+    ZombieVillagerCustom:
+      - "&3%player%&4 was slain by Zombie Villager using &6%weapon_name%&4"
+    ZombieHorse:
+      - "&3%player%&4 was slain by Zombie Horse"
+  namedmob: # For named mobs, use %killer% as mob
+    Bat:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    Bee:
+      - "&3%player%&4 was stung to death"
+    BlazeMelee:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    BlazeFireball:
+      - "&3%player%&4 was fireballed by &3%killer%&4"
+    Cat:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    CaveSpider:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    Chicken:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    Cod:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    Cow:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    Creeper:
+      - "&3%player%&4 was blown up by &3%killer%&4"
+    CreeperCharged: # charged Creeper
+      - "&3%player%&4 was blown up by &3%killer%&4"
+    Dolphin:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    Donkey:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    DrownedMelee:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    DrownedTrident:
+      - "&3%player%&4 was impaled by &3%killer%&4"
+    DrownedMeleeCustom:
+      - "&3%player%&4 was slain by &3%killer%&4 using &6%weapon_name%&4"
+    DrownedTridentCustom:
+      - "&3%player%&4 was impaled by &3%killer%&4 using &6%weapon_name%&4"
+    ElderGuardian:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    EnderDragon:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    EnderDragonBreath:
+      - "&3%player%&4 was killed by &3%killer%&4 using magic"
+    Enderman:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    Endermite:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    Evoker:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    Fox:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    Ghast:
+      - "&3%player%&4 was fireballed by &3%killer%&4"
+    Giant:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    Guardian:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    Hoglin:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    Horse:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    HuskMelee:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    HuskCustom:
+      - "&3%player%&4 was slain by &3%killer%&4 using &6%weapon_name%&4"
+    Illusioner:
+      - "&3%player%&4 was shot by &3%killer%&4"
+    IronGolem:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    Llama:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    MagmaCube:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    Mooshroom:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    Mule:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    Panda:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    Parrot:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    Phantom:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    Pig:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    PiglinMelee:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    PiglinCustom:
+      - "&3%player%&4 was slain by &3%killer%&4 using &6%weapon_name%&4"
+    PiglinBruteMelee:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    PiglinBruteCustom:
+      - "&3%player%&4 was slain by &3%killer%&4 using &6%weapon_name%&4"
+    PillagerArrow:
+      - "&3%player%&4 was shot by &3%killer%&4"
+    PillagerMelee:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    PillagerArrowCustom:
+      - "&3%player%&4 was shot by &3%killer%&4 using &6%weapon_name%&4"
+    PillagerCustom:
+      - "&3%player%&4 was slain by &3%killer%&4 using &6%weapon_name%&4"
+    PolarBear:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    PufferFish:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    Rabbit:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    Ravager:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    Salmon:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    Sheep:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    Shulker:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    Silverfish:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    SkeletonArrow:
+      - "&3%player%&4 was shot by &3%killer%&4"
+    SkeletonMelee:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    SkeletonArrowCustom:
+      - "&3%player%&4 was shot by &3%killer%&4 using &6%weapon_name%&4"
+    SkeletonCustom:
+      - "&3%player%&4 was slain by &3%killer%&4 using &6%weapon_name%&4"
+    SkeletonHorse:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    Slime:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    SnowGolem:
+      - "&3%player%&4 was pummeled by &3%killer%&4"
+    Spider:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    Squid:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    StrayArrow:
+      - "&3%player%&4 was shot by &3%killer%&4"
+    StrayMelee:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    StrayCustom:
+      - "&3%player%&4 was slain by &3%killer%&4 using &6%weapon_name%&4"
+    Strider:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    TropicalFish:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    Turtle:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    Vex:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    Villager:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    Vindicator:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    WanderingTrader:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    Witch:
+      - "&3%player%&4 was killed by &3%killer%&4 using magic"
+    Wither:
+      - "&3%player%&4 was slain by &6%killer%&4"
+      - "&3%player%&4 was buttfucked by &6%killer%&4"
+      - "&3%player%&4 was got massacared by &6%killer%&4"
+      - "&3%player%&4 was slapped around by &6%killer%&4"
+      - "&3%player%&4 was pummeled into multiple parts by &6%killer%&4"
+    WitherSpawnBoom: # Dies from wither spawn explosion
+      - "&3%player%&4 was blown up by &3%killer%&4"
+    WitherSkeletonMelee:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    WitherSkeletonCustom:
+      - "&3%player%&4 was slain by &3%killer%&4 using &6%weapon_name%&4"
+    Wolf:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    Zoglin:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    ZombieMelee:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    ZombieCustom:
+      - "&3%player%&4 was slain by &3%killer%&4 using &6%weapon_name%&4"
+    ZombiePigManMelee: # used in versions older than 1.16
+      - "&3%player%&4 was slain by &3%killer%&4"
+    ZombiePigManCustom: # used in versions older than 1.16
+      - "&3%player%&4 was slain by &3%killer%&4 using &6%weapon_name%&4"
+    ZombifiedPiglinMelee: # used in 1.16 and newer
+      - "&3%player%&4 was slain by &3%killer%&4"
+    ZombifiedPiglinCustom: # used in 1.16 and newer
+      - "&3%player%&4 was slain by &3%killer%&4 using &6%weapon_name%&4"
+    ZombieVillagerMelee:
+      - "&3%player%&4 was slain by &3%killer%&4"
+    ZombieVillagerCustom:
+      - "&3%player%&4 was slain by &3%killer%&4 using &6%weapon_name%&4"
+    ZombieHorse:
+      - "&3%player%&4 was slain by &3%killer%&4"
+  pvp:
+    PlayerMelee:
+      - "&3%killer%&4 seperated &3%player%&4 with their bare hands"
+      - "&3%killer%&4 fisted &3%player%&4 to death"
+      - "&3%player%&4 was punched to death by &3%killer%&4"
+    PlayerCustom:
+      - "&3%killer%&4 slain &3%player%&4 using &6%weapon_name%&4"
+      - "&3%player%&4 was pummeled by &3%killer%&4 using &6%weapon_name%&4"
+      - "&3%killer%&4 showed &3%player%&4 whos boss by using &6%weapon_name%&4"
+      - "&3%killer%&4 crushed &3%player%&4 using &6%weapon_name%&4"
+    PlayerArrow:
+      - "&3%player%&4 was shot by &3%killer%&4"
+      - "&3%player%&4 was shot in the knee by &3%killer%&4"
+    PlayerTrident:
+      - "&3%player%&4 was impaled by &3%killer%&4"
+    PlayerTridentCustom:
+      - "&3%player%&4 was impaled by &3%killer%&4 using &6%weapon_name%&4"
+    PlayerFireball: # Just in case
+      - "&3%player%&4 was fireballed by &3%killer%&4"
+    PlayerSnowball: # Just in case
+      - "&3%player%&4 was pummeled by &3%killer%&4"
+    PlayerProjectileCustom: # Bows, plugins like CrackShot
+      - "&3%player%&4 was shot by &3%killer%&4 using &6%weapon_name%&4"
+    PlayerPotion:
+      - "&3%player%&4 was killed by &3%killer%&4 using magic"
+  natural:
+    Thorns:
+      - "&3%player%&4 was killed while trying to hurt &3%killer%&4"
+    TNT:
+      - "&3%player%&4 blew up"
+    TNTKill:
+      - "&3%player%&4 was blown up by &3%killer%&4"
+    WitherSkull:
+      - "&3%player%&4 was shot by a &3%killer%&4's skull"
+    EnderCrystalKill:
+      - "&3%player%&4 experienced &3%killer%’s&4 &6end crystal"
+      - "&3%player%&4 was force fed &6an end crystal &4by &3%killer%&4"
+      - "&3%killer%&4 shoved &6an end crystal &4down &3%player% &4throat"
+      - "&3%killer%&4 fucked &3%player%&4 with &6an end crystal"
+      - "&3%player%&4 was blown to smithereens by &3%killer%'s &6end crystal"
+      - "&3%player%&4 foreskin was blown off by &3%killer%'s &6end crystal"
+      - "&3%killer%&4 massacared &3%player%&4 with &6an end crystal"
+      - "&3%killer%&4 has slain &3%player%&4 with &6an end crystal"
+      - "&3%player%&4 was blown up by &3%killer%&4 with &6an end crystal"
+      - "&3%player%&4 was utterly destroyed by &3%killer%&4 with &6an end crystal"
+      - "&3%player%&4 was destroyed by &3%killer%&4 with &6an end crystal"
+      - "&3%player%&4 was violently assassainated by &3%killer%&4 with &6an end crystal"
+    EnderCrystalSuicide:
+      - "&3%player%&4 just went kaboom with &6an end crystal"
+      - "&3%player%&4 killed themselves with &6an end crystal"
+      - "&3%player%&4 decided to commit sucide with &6an end crystal"
+      - "&3%player%&4 dropped dead from their own &6end crystal"
+      - "&3%player%&4 blew themselves up with &6an end crystal"
+      - "&3%player%&4 exploded themselves up with &6an end crystal"
+    Bed: # exploding beds or respawn anchors
+      - "&3%player%&4 was killed by &6Intentional Game Design"
+      - "&3%player%&4 just went kaboom with &6Intentional Game Design"
+      - "&3%player%&4 got fucked by &6Intentional Game Design"
+      - "&3%player%&4 foreskin was blown off by &6Intentional Game Design"
+    Cactus:
+      - "&3%player%&4 was pricked to death"
+      - "&3%player%&4 took a cactus up the ass"
+    CactusKill:
+      - "&3%player%&4 walked into a cactus whilst trying to escape &3%killer%&4"
+    Anvil:
+      - "&3%player%&4 was squashed to death by &6Anvil"
+    AnvilKill:
+      - "&3%player%&4 was squashed to death by &6Anvil"
+    FallingBlock: # Only when a FallingBlock is modified to cause damage
+      - "&3%player%&4 was squashed to death by a falling block"
+    FallingBlockKill: # as above
+      - "&3%player%&4 was squashed to death by a falling block"
+    UnknownArrow: # arrow from unknown entity or source, /summon?
+      - "&3%player%&4 was shot by arrow"
+    DispenserArrow:
+      - "&3%player%&4 was shot by arrow"
+    DispenserFireball:
+      - "&3%player%&4 burned to death"
+    DispenserSnowball:
+      - "&3%player%&4 died"
+    Drowning:
+      - "&3%player%&4 drowned"
+      - "&3%player%&4 went swimming with the fishes"
+      - "&3%player%&4 forgot to breath air"
+      - "&3%player%&4 drank themselves dead"
+      - "&3%player%&4 suffocated in water"
+    DrowningKill:
+      - "&3%player%&4 drowned whilst trying to escape &3%killer%&4"
+      - "&3%player%&4 went swimming with the fishes whilst trying to escape &3%killer%&4"
+      - "&3%player%&4 drank themselves dead whilst trying to escape &3%killer%&4"
+      - "&3%player%&4 forgot to breath air whilst trying to escape &3%killer%&4"
+      - "&3%player%&4 suffocated in water whilst trying to escape &3%killer%&4"
+    PotionPoison: # Normally impossible
+      - "&3%player%&4 died"
+    PotionWither:
+      - "&3%player%&4 withered away"
+    PotionWitherKill:
+      - "&3%player%&4 withered away whilst fighting &3%killer%&4"
+    PotionHarming:
+      - "&3%player%&4 was killed by magic"
+    PotionHarmingKill:
+      - "&3%player%&4 was killed by magic whilst trying to escape &3%killer%&4"
+    EvokerFang:
+      - "&3%player%&4 was killed by &3%killer%&4 using magic"
+    FireBlock:
+      - "&3%player%&4 went up in flames"
+    FireBlockKill:
+      - "&3%player%&4 walked into a fire whilst fighting &3%killer%&4"
+    FireTick:
+      - "&3%player%&4 burned to death"
+    FireTickKill:
+      - "&3%player%&4 burnt into a crisp whilst fighting &3%killer%&4"
+    Magma:
+      - "&3%player%&4 discovered floor was lava"
+    MagmaKill:
+      - "&3%player%&4 walked into danger zone due to &3%killer%&4"
+    BerryBush:
+      - "&3%player%&4 was poked to death by a sweet berry bush"
+    BerryBushKill:
+      - "&3%player%&4 was poked to death by a sweet berry bush whilst trying to escape &3%killer%&4"
+    Lava:
+      - "&3%player%&4 tried to swim in lava"
+      - "&3%player%&4 drowned in lava"
+      - "&3%player%&4 burned up in lava"
+      - "&3%player%&4 became lava"
+      - "&3%player%&4 tried to swim in lava"
+      - "&3%player%&4 was reduced to lava by lava"
+    LavaKill:
+      - "&3%player%&4 tried to swim in lava while trying to escape &3%killer%&4"
+    Lightning: # Happens when struck by lightning, vanilla: FireTick/FireBlock
+      - "&3%player%&4 went up in flames"
+      - "&3%player%&4 was struck by lightning"
+    Starvation:
+      - "&3%player%&4 starved to death"
+      - "&3%player%&4 didn't eat enough food"
+      - "&3%player%&4 forgot to eat"
+    Suffocation:
+      - "&3%player%&4 suffocated in a wall"
+    Cramming: # maxEntityCramming
+      - "&3%player%&4 was squished too much"
+    CrammingKill:
+      - "&3%player%&4 was squished too much"
+    Void:
+      - "&3%player%&4 fell out of the world"
+    VoidFall: # in DMP, if entity falls over y>=64 to the void
+      - "&3%player%&4 fell from a high place and fell out of the world"
+    VoidKill:
+      - "&3%player%&4 didn't want to live in the same world as &3%killer%&4"
+    FallShort: # Fall distance 5 blocks or less, or ender pearl
+      - "&3%player%&4 hit their head on the ground too hard"
+      - "&3%player%&4 tripped and fell"
+      - "&3%player%&4 didn't land right"
+      - "&3%player%&4 sprained his ankle"
+    FallLong: # Fall distance over 5 blocks
+      - "&3%player%&4 fell and crushed their insides with their legbones."
+      - "&3%player%&4 broke their neck, and the rest of their body."
+      - "&3%player%&4 massacared themselves on the ground."
+      - "&3%player%&4 didn't survive the fall. themselves on the ground."
+    FallLadder: 
+      - "&3%player%&4 dropped off a ladder"
+    FallVine: 
+      - "&3%player%&4 fell off some vines"
+    FallWeepingVine: 
+      - "&3%player%&4 fell off some weeping vines"
+    FallTwistingVine: 
+      - "&3%player%&4 fell off some twisting vines"
+    FallClimbing: # currently unused 
+      - "&3%player%&4 fell while climbing"
+    FallWater: 
+      - "&3%player%&4 fell out of the water"
+    FallTrapdoor: 
+      - "&3%player%&4 fell out a trapdoor"
+    FallScaffolding: 
+      - "&3%player%&4 fell out scaffolding"
+    FallFire: 
+      - "&3%player%&4 fell into a patch of fire"
+    FallCacti: 
+      - "&3%player%&4 fell into a patch of cacti"
+    FallBerryBush: 
+      - "&3%player%&4 fell into a sweet berry bush"
+    FallKill:
+      - "&3%player%&4 was doomed to fall by &3%killer%&4"
+      - "&3%player%&4 was thrown by &3%killer%&4 to his death"
+    FallKillWeapon:
+      - "&3%player%&4 was doomed to fall by &3%killer%&4 using &6%weapon_name%&4"
+    FallFinishKill:
+      - "&3%player%&4 fell too far and was finished by &3%killer%&4"
+    FallFinishKillWeapon:
+      - "&3%player%&4 fell too far and was finished by &3%killer%&4 using &6%weapon_name%&4"
+    FallExplosionKill: # FallKill caused by entity explosion
+      - "&3%player%&4 was blown from a high place by &3%killer%&4"
+    FallLadderKill: 
+      - "&3%player%&4 was shot off a ladder by &3%killer%&4"
+    FallVineKill: 
+      - "&3%player%&4 was shot off some vines by &3%killer%&4"
+    Firework: 
+      - "&3%player%&4 went off with a bang"
+    FireworkKill: 
+      - "&3%player%&4 went off with a bang whilst fighting &3%killer%&4"
+    CrossbowFirework: 
+      - "&3%player%&4 went off with a bang due to a firework fired by &3%killer%&4"
+    CrossbowFireworkCustom: 
+      - "&3%player%&4 went off with a bang due to a firework fired from &6%weapon_name%&4 by &3%killer%&4"
+    Elytra: 
+      - "&3%player%&4 experienced kinetic energy"
+      - "&3%player%&4 smashed themselves and died trying to fly with elytra."
+    ElytraKill: 
+      - "&3%player%&4 experienced kinetic energy whilst trying to escape &3%killer%&4"
+      - "&3%player%&4 smashed themselves and died trying to escape &3%killer%&4"
+    Suicide: # Some plugins may use this one, /suicide and /kill for example
+      - "&3%player%&4 killed themselves"
+    Melting: # Some plugins may use this one, orig. Snowmans + hot biomes
+      - "&3%player%&4 killed themselves"
+    DryOut: # Some killed themselves may use this one, orig. fish outside water
+      - "&3%player%&4 killed themselves"
+    Custom: # Some plugins may use this one
+      - "&3%player%&4 killed themselves"
+  unknown: 
+    - "&3%player%&4 killed themselves"
+  # if any custom plugins offer custom messages, add them below.
+  # for example: for tag "foo.bar", use
+  # foo:
+  #   bar:
+  #     - "foo.bar death message"
+     
+mob-names:
+  Bat: "Bat"
+  Bee: "Bee"
+  Blaze: "Blaze"
+  Cat: "Cat"
+  CaveSpider: "Cave Spider"
+  Chicken: "Chicken"
+  Cod: "Cod"
+  Cow: "Cow"
+  Creeper: "Creeper"
+  Dolphin: "Dolphin"
+  Donkey: "Donkey"
+  Drowned: "Drowned"
+  ElderGuardian: "Elder Guardian"
+  EnderDragon: "Ender Dragon"
+  Enderman: "Enderman"
+  Endermite: "Endermite"
+  Evoker: "Evoker"
+  Fox: "Fox"
+  Ghast: "Ghast"
+  Giant: "Giant"
+  Guardian: "Guardian"
+  Hoglin: "Hoglin"
+  Horse: "Horse"
+  Husk: "Husk"
+  Illusioner: "Illusioner"
+  IronGolem: "Iron Golem"
+  Llama: "Llama"
+  MagmaCube: "Magma Cube"
+  Mooshroom: "Mooshroom"
+  Mule: "Mule"
+  Panda: "Panda"
+  Parrot: "Parrot"
+  Phantom: "Phantom"
+  Pig: "Pig"
+  Piglin: "Piglin"
+  PiglinBrute: "Piglin Brute"
+  Pillager: "Pillager"
+  PolarBear: "Polar Bear"
+  PufferFish: "Puffer Fish"
+  Ocelot: "Ocelot"
+  Rabbit: "Rabbit"
+  Ravager: "Ravager"
+  Salmon: "Salmon"
+  Sheep: "Sheep"
+  Shulker: "Shulker"
+  Silverfish: "Silverfish"
+  Skeleton: "Skeleton"
+  SkeletonHorse: "Skeleton Horse"
+  Slime: "Slime"
+  SnowGolem: "Snow Golem"
+  Spider: "Spider"
+  Squid: "Squid"
+  Stray: "Stray"
+  Strider: "Strider"
+  TraderLlama: "Trader Llama"
+  TropicalFish: "Tropical Fish"
+  Turtle: "Turtle"
+  Vex: "Vex"
+  Villager: "Villlager"
+  Vindicator: "Vindicator"
+  WanderingTrader: "Wandering Trader"
+  Witch: "Witch"
+  Wither: "Wither"
+  WitherSkeleton: "Wither Skeleton"
+  Wolf: "Wolf"
+  Zoglin: "Zoglin"
+  Zombie: "Zombie"
+  ZombieHorse: "Zombie Horse"
+  ZombiePigMan: "Zombie Pigman"
+  ZombifiedPiglin: "Zombified Piglin"
+  ZombieVillager: "Zombie Villager"
+
+item-names:
+  # Use this section to provide custom translations for items when used in a
+  # death message to replace %weapon_name% or %weapon_name%.
+  # See list of options here:
+  #   https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html.
+  #   (these may change depending on the Minecraft version)
+  # Example:
+  # IRON_SWORD: "Iron Sword"
+
+custom-mob-death-messages:
+  # The following attribute takes in regular expressions and checks top-down 
+  # whether the names of the mobs match them.
+  # If there is no list, as in [], the plugin will look up the message from 
+  # the normal death messages.
+  # If the list only has an empty message, the death message for that mob will 
+  # be hidden.
+  # To match color codes, use the § character instead of &. (This file must be 
+  # encoded in UTF-8)
+  # Examples:
+  #
+  # "_*": # match all mobs
+  #   - "%player% was killed by a mob"
+  #
+  # "^[Ss]_*": # match all mobs beginning with S or s
+  #   - "%player% was killed by a mob"
+  #
+  # "§cMy Custom Boss": [] # display normal messages for mobs named 
+  #                        # 'My Custom Boss' written in red
+  #
+  # "My Custom Boss": # match all mobs with name being 'My Custom Boss'
+  #   - "%player% was killed by a boss"
+  #   - "%player% was pummeled by a boss"
+  #
+  # "§aMy Custom Boss": # match all mobs with name being 'My Custom Boss' 
+  #                     # written in light green
+  #   - "%player% was killed by a boss"
+  #   - "%player% was pummeled by a boss"
+  #
+  # "_*My Custom Boss_*": # match all mobs with name containing 'My Custom Boss'
+  #   - "%player% was killed by a boss"
+  #   - "%player% was pummeled by a boss"
+  #
+  # !!!!!!!!!!!!!!!!!!!!!!!! IMPORTANT !!!!!!!!!!!!!!!!!!!!!!!!
+  #  IN REGEXES; ALL DOTS MUST BE REPRESENTED WITH UNDERSCORES
+  # !!!!!!!!!!!!!!!!!!!!!!!! IMPORTANT !!!!!!!!!!!!!!!!!!!!!!!!
+  #
+  Melee:
+    "_*": []
+  Ranged:
+    "_*": []
+  Potion:
+    "_*": []
+  Thorns:
+    "_*": []
+  TNTKill:
+    "_*": []
+  CactusKill:
+    "_*": []
+  DrowningKill:
+    "_*": []
+  CrammingKill:
+    "_*": []
+  FireBlockKill:
+    "_*": []
+  FireTickKill:
+    "_*": []
+  LavaKill:
+    "_*": []
+  MagmaKill:
+    "_*": []
+  VoidKill:
+    "_*": []
+  FallKill:
+    "_*": []
+  Other:
+    "_*": []
+
+custom-user-death-messages:
+  # Same deal here. The plugin checks from the actual user names of players.
+  # custom-user-death-messages is preferred over custom-player-death-messages:
+  # empty list here will pass to custom-player-death-messages before passing 
+  # through to normal death messages.
+  Melee:
+    "_*": []
+  Ranged:
+    "_*": []
+  Potion:
+    "_*": []
+  Thorns:
+    "_*": []
+  TNTKill:
+    "_*": []
+  CactusKill:
+    "_*": []
+  DrowningKill:
+    "_*": []
+  CrammingKill:
+    "_*": []
+  FireBlockKill:
+    "_*": []
+  FireTickKill:
+    "_*": []
+  LavaKill:
+    "_*": []
+  MagmaKill:
+    "_*": []
+  VoidKill:
+    "_*": []
+  FallKill:
+    "_*": []
+  Other:
+    "_*": []
+
+custom-player-death-messages:
+  # Same deal here. The plugin checks from the display names of players.
+  Melee:
+    "_*": []
+  Ranged:
+    "_*": []
+  Potion:
+    "_*": []
+  Thorns:
+    "_*": []
+  TNTKill:
+    "_*": []
+  CactusKill:
+    "_*": []
+  DrowningKill:
+    "_*": []
+  CrammingKill:
+    "_*": []
+  FireBlockKill:
+    "_*": []
+  FireTickKill:
+    "_*": []
+  LavaKill:
+    "_*": []
+  MagmaKill:
+    "_*": []
+  VoidKill:
+    "_*": []
+  FallKill:
+    "_*": []
+  Other:
+    "_*": []
+
+custom-biome-names:
+  # See https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/block/Biome.html.
+  # The key should be one from the list above, for example:
+  
+  # SAVANNA_ROCK: "Savanna Plateau"
+  
+custom-world-names:
+  # World name as the key and display name as the value.
+  
+  # "world": "World #1"
+  
+custom-messages-per-player:
+  # Add custom messages for players. Use the UUID as the key, then use a death 
+  # reason key with the list of messages.
+  # To get the UUID of an online player, use /dmsg uuid player_name
+  
+  # Will this override custom-mob-death-messages, custom-user-death-messages,
+  # and custom-player-death-messages?
+  override: true
+  # also affects custom-messages-per-killer-player
+  
+  # "123e4567-e89b-12d3-a456-426655440000":
+  #   natural:
+  #     TNT:
+  #       - "A VIP player, %player%, blew up!"
+  
+  # It is also possible to override all death message causes for a player:
+  # "123e4567-e89b-12d3-a456-426655440000":
+  #   "*":
+  #     - "A VIP player, %player%, died!"
+  
+custom-messages-per-killer-player:
+  # Same as above, but for killing players in PVP events.
+  # To get the UUID of an online player, use /dmsg uuid player_name
+  
+  # "123e4567-e89b-12d3-a456-426655440000":
+  #   natural:
+  #     TNTKill:
+  #       - "%player% got blown up by a VIP player, %entity%!"  
+  
+custom-messages-per-weapon-name:
+  # Same as above, but for weapon names. The key is a regular expression,
+  # similar to the ones used in custom-mob-death-messages (see it for more).
+  
+  # "Super Duper Sword_*": # all weapons with names that start with...
+  #   pvp:
+  #     PlayerCustom:
+  #       - "%player% was slain by %killer% using the mightiest weapon of all"
+  
+custom-messages-per-weapon-type:
+  # Same as above, but for weapon types. The same keys are used
+  # as in item-names.
+  
+  # IRON_SWORD:
+  #   pvp:
+  #     PlayerCustom:
+  #       - "%player% was slain by %killer% using an iron sword"
+  
+custom-messages-per-world:
+  # Add custom messages for worlds. Use the world name as the key, then 
+  # use a death reason key with the list of messages.
+  # This has lesser priority than custom-messages-per-player,
+  # custom-messages-per-killer-player or others.
+  
+  # "world":
+  #   natural:
+  #     TNT:
+  #       - "A player, %player%, blew up in the specific world!"  
+  
