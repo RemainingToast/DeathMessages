@@ -335,6 +335,7 @@ death-messages:
       - "&3%player%&4 was slain by Salmon"
     Sheep:
       - "&3%player%&4 was slain by Sheep"
+      - "&3%player%&4 is somehow a fucking retard"
     Shulker:
       - "&3%player%&4 was slain by Shulker"
     Silverfish:
@@ -605,6 +606,7 @@ death-messages:
       - "&3%killer%&4 seperated &3%player%&4 with their bare hands"
       - "&3%killer%&4 fisted &3%player%&4 to death"
       - "&3%player%&4 was punched to death by &3%killer%&4"
+      - "&3%killer%&4 bashed &3%player%&4's fucking head in"
     PlayerCustom:
       - "&3%killer%&4 slain &3%player%&4 using &6%weapon_name%&4"
       - "&3%player%&4 was pummeled by &3%killer%&4 using &6%weapon_name%&4"
@@ -647,6 +649,8 @@ death-messages:
       - "&3%player%&4 was utterly destroyed by &3%killer%&4 with &6an end crystal"
       - "&3%player%&4 was destroyed by &3%killer%&4 with &6an end crystal"
       - "&3%player%&4 was violently assassainated by &3%killer%&4 with &6an end crystal"
+      - "&3%player%&4 just got added to &3%killer%&4's CPVP montage with &6an end crystal"
+      - "&3%player%&4 just deepthroated &3%killer%’s&4 &6end crystal"
     EnderCrystalSuicide:
       - "&3%player%&4 just went kaboom with &6an end crystal"
       - "&3%player%&4 killed themselves with &6an end crystal"
@@ -654,6 +658,7 @@ death-messages:
       - "&3%player%&4 dropped dead from their own &6end crystal"
       - "&3%player%&4 blew themselves up with &6an end crystal"
       - "&3%player%&4 exploded themselves up with &6an end crystal"
+      - "&3%player%&4 suffered from a huge fucking config issue with &6an end crystal"
     Bed: # exploding beds or respawn anchors
       - "&3%player%&4 was killed by &6Intentional Game Design"
       - "&3%player%&4 just went kaboom with &6Intentional Game Design"
@@ -662,6 +667,7 @@ death-messages:
     Cactus:
       - "&3%player%&4 was pricked to death"
       - "&3%player%&4 took a cactus up the ass"
+      - "&3%player%&4 failed to cactus dupe"
     CactusKill:
       - "&3%player%&4 walked into a cactus whilst trying to escape &3%killer%&4"
     Anvil:
@@ -686,12 +692,14 @@ death-messages:
       - "&3%player%&4 forgot to breath air"
       - "&3%player%&4 drank themselves dead"
       - "&3%player%&4 suffocated in water"
+      - "&3%player%&4 forgot to breathe"
     DrowningKill:
       - "&3%player%&4 drowned whilst trying to escape &3%killer%&4"
       - "&3%player%&4 went swimming with the fishes whilst trying to escape &3%killer%&4"
       - "&3%player%&4 drank themselves dead whilst trying to escape &3%killer%&4"
       - "&3%player%&4 forgot to breath air whilst trying to escape &3%killer%&4"
       - "&3%player%&4 suffocated in water whilst trying to escape &3%killer%&4"
+      - "&3%player%&4 forgot to breathe whilst running away from &3%killer%&4"
     PotionPoison: # Normally impossible
       - "&3%player%&4 died"
     PotionWither:
@@ -811,6 +819,7 @@ death-messages:
       - "&3%player%&4 smashed themselves and died trying to escape &3%killer%&4"
     Suicide: # Some plugins may use this one, /suicide and /kill for example
       - "&3%player%&4 killed themselves"
+      - "&3%player%&4 gave up on life"
     Melting: # Some plugins may use this one, orig. Snowmans + hot biomes
       - "&3%player%&4 killed themselves"
     DryOut: # Some killed themselves may use this one, orig. fish outside water
