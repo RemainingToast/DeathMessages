@@ -610,10 +610,11 @@ death-messages:
       - "&3%killer%&4 fisted &3%player%&4 to death"
       - "&3%player%&4 was punched to death by &3%killer%&4"
       - "&3%killer%&4 bashed &3%player%&4's fucking head in"
+      - "&3%killer%&4 went caveman on &3%player%&4"
     PlayerCustom:
       - "&3%killer%&4 slain &3%player%&4 using &6%weapon_name%&4"
       - "&3%player%&4 was pummeled by &3%killer%&4 using &6%weapon_name%&4"
-      - "&3%killer%&4 showed &3%player%&4 whos boss by using &6%weapon_name%&4"
+      - "&3%killer%&4 showed &3%player%&4 who's boss by using &6%weapon_name%&4"
       - "&3%killer%&4 crushed &3%player%&4 using &6%weapon_name%&4"
     PlayerArrow:
       - "&3%player%&4 was shot by &3%killer%&4"
@@ -635,6 +636,7 @@ death-messages:
       - "&3%player%&4 was killed while trying to hurt &3%killer%&4"
     TNT:
       - "&3%player%&4 blew up"
+      - "&3%player%&4 forgot to move away from the tnt"
     TNTKill:
       - "&3%player%&4 was blown up by &3%killer%&4"
     WitherSkull:
@@ -655,6 +657,7 @@ death-messages:
       - "&3%player%&4 was violently assassainated by &3%killer%&4 with &6an end crystal"
       - "&3%player%&4 just deepthroated &3%killer%’s&4 &6end crystal"
       - "&3%killer%&4 made &3%player%&4 eat &6end crystal"
+      - "&3%killer%&4 got absolutely fucking annihilated by &3%killer%&4"
     EnderCrystalSuicide:
       - "&3%player%&4 just went kaboom with &6an end crystal"
       - "&3%player%&4 killed themselves with &6an end crystal"
@@ -697,6 +700,7 @@ death-messages:
     DispenserSnowball:
       - "&3%player%&4 died"
     Drowning:
+      - "&3%player%&4 thought they had water breathing"
       - "&3%player%&4 drowned"
       - "&3%player%&4 went swimming with the fishes"
       - "&3%player%&4 forgot to breathe"
@@ -775,6 +779,7 @@ death-messages:
       - "&3%player%&4 broke their neck, and the rest of their body."
       - "&3%player%&4 massacared themselves on the ground."
       - "&3%player%&4 didn't survive the fall. themselves on the ground."
+      - "&3%player%&4 made out with the ground"
     FallLadder:
       - "&3%player%&4 dropped off a ladder"
     FallVine:
