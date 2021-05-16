@@ -663,7 +663,7 @@ death-messages:
       - "&3%player%&4 blew themselves up with &6an end crystal"
       - "&3%player%&4 exploded themselves up with &6an end crystal"
       - "&3%player%&4 suffered from a huge fucking config issue with &6an end crystal"
-      - "&6end crystal made &3%player%&4 kill themself"
+      - "A &6End crystal made &3%player%&4 kill themself"
     Bed: # exploding beds or respawn anchors
       - "&3%player%&4 was killed by &6Intentional Game Design"
       - "&3%player%&4 just went kaboom with &6Intentional Game Design"
