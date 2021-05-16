@@ -252,6 +252,7 @@ death-messages:
       - "&3%player%&4 was slain by Dolphin"
     Donkey:
       - "&3%player%&4 was slain by Donkey"
+      - "&3%player%&4 died to a duper animal"
     DrownedMelee:
       - "&3%player%&4 was slain by Drowned"
     DrownedTrident:
