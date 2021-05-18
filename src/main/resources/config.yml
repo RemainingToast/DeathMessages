@@ -623,7 +623,7 @@ death-messages:
       - "&3%killer%&4 seperated &3%player%&4 with their bare hands"
       - "&3%killer%&4 fisted &3%player%&4 to death"
       - "&3%player%&4 was punched to death by &3%killer%&4"
-      - "&3%killer%&4 bashed &3%player%&4's fucking head in"
+      - "&3%killer%&4 bashed &3%player%'s&4 fucking head in"
       - "&3%killer%&4 went caveman on &3%player%&4"
     PlayerCustom:
       - "&3%killer%&4 slain &3%player%&4 using &6%weapon%&4"
@@ -659,8 +659,8 @@ death-messages:
       - "&3%player%&4 was blown up by &3%killer%&4"
       - "&3%player%&4 was detonated by &3%killer%&4"
     WitherSkull:
-      - "&3%player%&4 was shot by a &3%killer%&4's skull"
-      - "&3%killer%&4's skull shot &3%player%&4"
+      - "&3%player%&4 was shot by a &3%killer%'s&4 skull"
+      - "&3%killer%'s&4 skull shot &3%player%&4"
     EnderCrystalKill:
       - "&3%player%&4 experienced &3%killer%’s&4 &6end crystal"
       - "&3%player%&4 was force fed an &6end crystal &4by &3%killer%&4"
