@@ -815,10 +815,10 @@ death-messages:
       - "&3%player%&4 sprained his ankle"
       - "&3%player%&4 stubbed their toe"
     FallLong: # Fall distance over 5 blocks
-      - "&3%player%&4 fell and crushed their insides with their legbones."
-      - "&3%player%&4 broke their neck, and the rest of their body."
-      - "&3%player%&4 massacared themselves on the ground."
-      - "&3%player%&4 didn't survive the fall."
+      - "&3%player%&4 fell and crushed their insides with their legbones"
+      - "&3%player%&4 broke their neck, and the rest of their body"
+      - "&3%player%&4 massacared themselves on the ground"
+      - "&3%player%&4 didn't survive the fall"
       - "&3%player%&4 made out with the ground"
     FallLadder:
       - "&3%player%&4 dropped off a ladder"
