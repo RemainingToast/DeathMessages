@@ -77,11 +77,11 @@ worlds-pvp-death-message-radius:
 # Default: 3
 cooldown-death-count: 3
 # Default: 10
-cooldown-death-interval: 10
+cooldown-death-interval: 5
 # Default: 10
-cooldown-death-cooldown: 10
+cooldown-death-cooldown: 5
 # Default: false
-cooldown-death-reset: false
+cooldown-death-reset: true
 
 # Show debug information upon death, useful for determining plugin conflicts,
 # etc.
