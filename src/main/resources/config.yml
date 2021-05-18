@@ -651,7 +651,7 @@ death-messages:
     Thorns:
       - "&3%player%&4 was killed while trying to hurt &3%killer%&4"
       - "&3%player%&4 killed himself trying to hurt &3%killer%&4"
-   TNT:
+    TNT:
       - "&3%player%&4 blew up"
       - "&3%player%&4 went kaboom"
       - "&3%player%&4 forgot to move away from the tnt"
