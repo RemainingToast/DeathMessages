@@ -265,9 +265,9 @@ death-messages:
     DrownedTrident:
       - "&3%player%&4 was impaled by Drowned"
     DrownedMeleeCustom:
-      - "&3%player%&4 was slain by Drowned using &6%weapon_name%&4"
+      - "&3%player%&4 was slain by Drowned using &6%weapon%&4"
     DrownedTridentCustom:
-      - "&3%player%&4 was impaled by Drowned using &6%weapon_name%&4"
+      - "&3%player%&4 was impaled by Drowned using &6%weapon%&4"
     ElderGuardian:
       - "&3%player%&4 was slain by Elder Guardian"
     EnderDragon:
@@ -295,7 +295,7 @@ death-messages:
     HuskMelee:
       - "&3%player%&4 was slain by Husk"
     HuskCustom:
-      - "&3%player%&4 was slain by Husk using &6%weapon_name%&4"
+      - "&3%player%&4 was slain by Husk using &6%weapon%&4"
     Illusioner:
       - "&3%player%&4 was shot by Illusioner"
     IronGolem:
@@ -319,19 +319,19 @@ death-messages:
     PiglinMelee:
       - "&3%player%&4 was slain by Piglin"
     PiglinCustom:
-      - "&3%player%&4 was slain by Piglin using &6%weapon_name%&4"
+      - "&3%player%&4 was slain by Piglin using &6%weapon%&4"
     PiglinBruteMelee:
       - "&3%player%&4 was slain by Piglin Brute"
     PiglinBruteCustom:
-      - "&3%player%&4 was slain by Piglin Brute using &6%weapon_name%&4"
+      - "&3%player%&4 was slain by Piglin Brute using &6%weapon%&4"
     PillagerArrow:
       - "&3%player%&4 was shot by Pillager"
     PillagerMelee:
       - "&3%player%&4 was slain by Pillager"
     PillagerArrowCustom:
-      - "&3%player%&4 was shot by Pillager using &6%weapon_name%&4"
+      - "&3%player%&4 was shot by Pillager using &6%weapon%&4"
     PillagerCustom:
-      - "&3%player%&4 was slain by Pillager using &6%weapon_name%&4"
+      - "&3%player%&4 was slain by Pillager using &6%weapon%&4"
     PolarBear:
       - "&3%player%&4 was slain by Polar Bear"
     PufferFish:
@@ -352,11 +352,11 @@ death-messages:
     SkeletonArrow:
       - "&3%player%&4 was shot by Skeleton"
     SkeletonArrowCustom:
-      - "&3%player%&4 was shot by Skeleton using &6%weapon_name%&4"
+      - "&3%player%&4 was shot by Skeleton using &6%weapon%&4"
     SkeletonMelee:
       - "&3%player%&4 was slain by Skeleton"
     SkeletonCustom:
-      - "&3%player%&4 was slain by Skeleton using &6%weapon_name%&4"
+      - "&3%player%&4 was slain by Skeleton using &6%weapon%&4"
     SkeletonHorse:
       - "&3%player%&4 was slain by Skeleton Horse"
     Slime:
@@ -372,7 +372,7 @@ death-messages:
     StrayMelee:
       - "&3%player%&4 was slain by Stray"
     StrayCustom:
-      - "&3%player%&4 was slain by Stray using &6%weapon_name%&4"
+      - "&3%player%&4 was slain by Stray using &6%weapon%&4"
     Strider:
       - "&3%player%&4 was slain by Strider"
     TropicalFish:
@@ -398,7 +398,7 @@ death-messages:
     WitherSkeletonMelee:
       - "&3%player%&4 was slain by Wither Skeleton"
     WitherSkeletonCustom:
-      - "&3%player%&4 was slain by Wither Skeleton using &6%weapon_name%&4"
+      - "&3%player%&4 was slain by Wither Skeleton using &6%weapon%&4"
     Wolf:
       - "&3%player%&4 was slain by Wolf"
     Zoglin:
@@ -406,19 +406,19 @@ death-messages:
     ZombieMelee:
       - "&3%player%&4 was slain by Zombie"
     ZombieCustom:
-      - "&3%player%&4 was slain by Zombie using &6%weapon_name%&4"
+      - "&3%player%&4 was slain by Zombie using &6%weapon%&4"
     ZombiePigManMelee: # used in versions older than 1.16
       - "&3%player%&4 was slain by Zombie Pigman"
     ZombiePigManCustom: # used in versions older than 1.16
-      - "&3%player%&4 was slain by Zombie Pigman using &6%weapon_name%&4"
+      - "&3%player%&4 was slain by Zombie Pigman using &6%weapon%&4"
     ZombifiedPiglinMelee: # used in 1.16 and newer
       - "&3%player%&4 was slain by Zombified Piglin"
     ZombifiedPiglinCustom: # used in 1.16 and newer
-      - "&3%player%&4 was slain by Zombified Piglin using &6%weapon_name%&4"
+      - "&3%player%&4 was slain by Zombified Piglin using &6%weapon%&4"
     ZombieVillagerMelee:
       - "&3%player%&4 was slain by Zombie Villager"
     ZombieVillagerCustom:
-      - "&3%player%&4 was slain by Zombie Villager using &6%weapon_name%&4"
+      - "&3%player%&4 was slain by Zombie Villager using &6%weapon%&4"
     ZombieHorse:
       - "&3%player%&4 was slain by Zombie Horse"
   namedmob: # For named mobs, use %killer% as mob
@@ -461,9 +461,9 @@ death-messages:
     DrownedTrident:
       - "&3%player%&4 was impaled by &3%killer%&4"
     DrownedMeleeCustom:
-      - "&3%player%&4 was slain by &3%killer%&4 using &6%weapon_name%&4"
+      - "&3%player%&4 was slain by &3%killer%&4 using &6%weapon%&4"
     DrownedTridentCustom:
-      - "&3%player%&4 was impaled by &3%killer%&4 using &6%weapon_name%&4"
+      - "&3%player%&4 was impaled by &3%killer%&4 using &6%weapon%&4"
     ElderGuardian:
       - "&3%player%&4 was slain by &3%killer%&4"
     EnderDragon:
@@ -491,7 +491,7 @@ death-messages:
     HuskMelee:
       - "&3%player%&4 was slain by &3%killer%&4"
     HuskCustom:
-      - "&3%player%&4 was slain by &3%killer%&4 using &6%weapon_name%&4"
+      - "&3%player%&4 was slain by &3%killer%&4 using &6%weapon%&4"
     Illusioner:
       - "&3%player%&4 was shot by &3%killer%&4"
     IronGolem:
@@ -515,19 +515,19 @@ death-messages:
     PiglinMelee:
       - "&3%player%&4 was slain by &3%killer%&4"
     PiglinCustom:
-      - "&3%player%&4 was slain by &3%killer%&4 using &6%weapon_name%&4"
+      - "&3%player%&4 was slain by &3%killer%&4 using &6%weapon%&4"
     PiglinBruteMelee:
       - "&3%player%&4 was slain by &3%killer%&4"
     PiglinBruteCustom:
-      - "&3%player%&4 was slain by &3%killer%&4 using &6%weapon_name%&4"
+      - "&3%player%&4 was slain by &3%killer%&4 using &6%weapon%&4"
     PillagerArrow:
       - "&3%player%&4 was shot by &3%killer%&4"
     PillagerMelee:
       - "&3%player%&4 was slain by &3%killer%&4"
     PillagerArrowCustom:
-      - "&3%player%&4 was shot by &3%killer%&4 using &6%weapon_name%&4"
+      - "&3%player%&4 was shot by &3%killer%&4 using &6%weapon%&4"
     PillagerCustom:
-      - "&3%player%&4 was slain by &3%killer%&4 using &6%weapon_name%&4"
+      - "&3%player%&4 was slain by &3%killer%&4 using &6%weapon%&4"
     PolarBear:
       - "&3%player%&4 was slain by &3%killer%&4"
     PufferFish:
@@ -549,9 +549,9 @@ death-messages:
     SkeletonMelee:
       - "&3%player%&4 was slain by &3%killer%&4"
     SkeletonArrowCustom:
-      - "&3%player%&4 was shot by &3%killer%&4 using &6%weapon_name%&4"
+      - "&3%player%&4 was shot by &3%killer%&4 using &6%weapon%&4"
     SkeletonCustom:
-      - "&3%player%&4 was slain by &3%killer%&4 using &6%weapon_name%&4"
+      - "&3%player%&4 was slain by &3%killer%&4 using &6%weapon%&4"
     SkeletonHorse:
       - "&3%player%&4 was slain by &3%killer%&4"
     Slime:
@@ -567,7 +567,7 @@ death-messages:
     StrayMelee:
       - "&3%player%&4 was slain by &3%killer%&4"
     StrayCustom:
-      - "&3%player%&4 was slain by &3%killer%&4 using &6%weapon_name%&4"
+      - "&3%player%&4 was slain by &3%killer%&4 using &6%weapon%&4"
     Strider:
       - "&3%player%&4 was slain by &3%killer%&4"
     TropicalFish:
@@ -595,7 +595,7 @@ death-messages:
     WitherSkeletonMelee:
       - "&3%player%&4 was slain by &3%killer%&4"
     WitherSkeletonCustom:
-      - "&3%player%&4 was slain by &3%killer%&4 using &6%weapon_name%&4"
+      - "&3%player%&4 was slain by &3%killer%&4 using &6%weapon%&4"
     Wolf:
       - "&3%player%&4 was slain by &3%killer%&4"
     Zoglin:
@@ -603,19 +603,19 @@ death-messages:
     ZombieMelee:
       - "&3%player%&4 was slain by &3%killer%&4"
     ZombieCustom:
-      - "&3%player%&4 was slain by &3%killer%&4 using &6%weapon_name%&4"
+      - "&3%player%&4 was slain by &3%killer%&4 using &6%weapon%&4"
     ZombiePigManMelee: # used in versions older than 1.16
       - "&3%player%&4 was slain by &3%killer%&4"
     ZombiePigManCustom: # used in versions older than 1.16
-      - "&3%player%&4 was slain by &3%killer%&4 using &6%weapon_name%&4"
+      - "&3%player%&4 was slain by &3%killer%&4 using &6%weapon%&4"
     ZombifiedPiglinMelee: # used in 1.16 and newer
       - "&3%player%&4 was slain by &3%killer%&4"
     ZombifiedPiglinCustom: # used in 1.16 and newer
-      - "&3%player%&4 was slain by &3%killer%&4 using &6%weapon_name%&4"
+      - "&3%player%&4 was slain by &3%killer%&4 using &6%weapon%&4"
     ZombieVillagerMelee:
       - "&3%player%&4 was slain by &3%killer%&4"
     ZombieVillagerCustom:
-      - "&3%player%&4 was slain by &3%killer%&4 using &6%weapon_name%&4"
+      - "&3%player%&4 was slain by &3%killer%&4 using &6%weapon%&4"
     ZombieHorse:
       - "&3%player%&4 was slain by &3%killer%&4"
   pvp:
@@ -626,25 +626,25 @@ death-messages:
       - "&3%killer%&4 bashed &3%player%&4's fucking head in"
       - "&3%killer%&4 went caveman on &3%player%&4"
     PlayerCustom:
-      - "&3%killer%&4 slain &3%player%&4 using &6%weapon_name%&4"
-      - "&3%player%&4 was pummeled by &3%killer%&4 using &6%weapon_name%&4"
-      - "&3%killer%&4 showed &3%player%&4 who's boss by using &6%weapon_name%&4"
-      - "&3%killer%&4 crushed &3%player%&4 using &6%weapon_name%&4"
+      - "&3%killer%&4 slain &3%player%&4 using &6%weapon%&4"
+      - "&3%player%&4 was pummeled by &3%killer%&4 using &6%weapon%&4"
+      - "&3%killer%&4 showed &3%player%&4 who's boss by using &6%weapon%&4"
+      - "&3%killer%&4 crushed &3%player%&4 using &6%weapon%&4"
     PlayerArrow:
       - "&3%player%&4 was shot by &3%killer%&4"
       - "&3%player%&4 was shot in the knee by &3%killer%&4"
     PlayerTrident:
       - "&3%player%&4 was impaled by &3%killer%&4"
     PlayerTridentCustom:
-      - "&3%player%&4 was impaled by &3%killer%&4 using &6%weapon_name%&4"
+      - "&3%player%&4 was impaled by &3%killer%&4 using &6%weapon%&4"
     PlayerFireball: # Just in case
       - "&3%player%&4 was fireballed by &3%killer%&4"
     PlayerSnowball: # Just in case
       - "&3%player%&4 was pummeled by &3%killer%'s&4 &6Snowballs"
       - "&3%player%&4 was raped by &3%killer%'s&4 &6Snowballs"
     PlayerProjectileCustom: # Bows, plugins like CrackShot
-      - "&3%player%&4 was shot by &3%killer%&4 using &6%weapon_name%&4"
-      - "&3%player%&4 was impaled by &3%killer%&4 using &6%weapon_name%&4"
+      - "&3%player%&4 was shot by &3%killer%&4 using &6%weapon%&4"
+      - "&3%player%&4 was impaled by &3%killer%&4 using &6%weapon%&4"
     PlayerPotion:
       - "&3%player%&4 was killed by &3%killer%&4 using magic"
   natural:
@@ -849,11 +849,11 @@ death-messages:
       - "&3%player%&4 was doomed to fall by &3%killer%&4"
       - "&3%player%&4 was thrown by &3%killer%&4 to his death"
     FallKillWeapon:
-      - "&3%player%&4 was doomed to fall by &3%killer%&4 using &6%weapon_name%&4"
+      - "&3%player%&4 was doomed to fall by &3%killer%&4 using &6%weapon%&4"
     FallFinishKill:
       - "&3%player%&4 fell too far and was finished by &3%killer%&4"
     FallFinishKillWeapon:
-      - "&3%player%&4 fell too far and was finished by &3%killer%&4 using &6%weapon_name%&4"
+      - "&3%player%&4 fell too far and was finished by &3%killer%&4 using &6%weapon%&4"
     FallExplosionKill: # FallKill caused by entity explosion
       - "&3%player%&4 was blown from a high place by &3%killer%&4"
     FallLadderKill:
@@ -868,7 +868,7 @@ death-messages:
     CrossbowFirework:
       - "&3%player%&4 went off with a bang due to a firework fired by &3%killer%&4"
     CrossbowFireworkCustom:
-      - "&3%player%&4 went off with a bang due to a firework fired from &6%weapon_name%&4 by &3%killer%&4"
+      - "&3%player%&4 went off with a bang due to a firework fired from &6%weapon%&4 by &3%killer%&4"
     Elytra:
       - "&3%player%&4 experienced kinetic energy"
       - "&3%player%&4 smashed themselves and died trying to fly with elytra"
