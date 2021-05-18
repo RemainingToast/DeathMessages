@@ -226,8 +226,7 @@ death-messages:
   # suffix-pvp: ""
   mob:
     Bat:
-      - "&3%player%&4 was slain by Bat"
-      - "How the fuck did &3%player%&4 die to a Bat"
+      - "&4How the fuck did &3%player%&4 die to a &6Bat"
     Bee:
       - "&3%player%&4 was stung to death"
     BlazeMelee:
@@ -245,9 +244,17 @@ death-messages:
     Cow:
       - "&3%player%&4 was slain by Cow"
     Creeper:
-      - "&3%player%&4 was blown up by Creeper"
+      - "&3%player%&4 was blown up by creeper"
+      - "&3%player%&4 was violently assassainated by creeper"
+      - "&3%player%&4 got absolutely fucking annihilated by creeper"
+      - "&3%player%&4 foreskin was blown off by creeper"
+      - "&3%player%&4 was blown to smithereens by creeper"
     CreeperCharged: # charged Creeper
-      - "&3%player%&4 was blown up by Creeper"
+      - "&3%player%&4 was blown up by charged creeper"
+      - "&3%player%&4 was violently assassainated by charged creeper"
+      - "&3%player%&4 got absolutely fucking annihilated by charged creeper"
+      - "&3%player%&4 foreskin was blown off by charged creeper"
+      - "&3%player%&4 was blown to smithereens by charged creeper"
     Dolphin:
       - "&3%player%&4 was slain by Dolphin"
     Donkey:
@@ -308,8 +315,7 @@ death-messages:
     Phantom:
       - "&3%player%&4 was slain by Phantom"
     Pig:
-      - "&3%player%&4 was slain by Pig"
-      - "A Pig turned &3%player%&4 into bacon"
+      - "&3%player%&4 turned into bacon by &6Pig"
     PiglinMelee:
       - "&3%player%&4 was slain by Piglin"
     PiglinCustom:
@@ -436,8 +442,16 @@ death-messages:
       - "&3%player%&4 was slain by &3%killer%&4"
     Creeper:
       - "&3%player%&4 was blown up by &3%killer%&4"
+      - "&3%player%&4 was violently assassainated by &3%killer%&4"
+      - "&3%player%&4 got absolutely fucking annihilated by &3%killer%&4"
+      - "&3%player%&4 foreskin was blown off by &3%killer%&4"
+      - "&3%player%&4 was blown to smithereens by &3%killer%&4"
     CreeperCharged: # charged Creeper
-      - "&3%player%&4 was blown up by &3%killer%&4"
+      - "&3%player%&4 was blown up by charged &3%killer%&4"
+      - "&3%player%&4 was violently assassainated by charged &3%killer%&4"
+      - "&3%player%&4 got absolutely fucking annihilated by charged &3%killer%&4"
+      - "&3%player%&4 foreskin was blown off by charged &3%killer%&4"
+      - "&3%player%&4 was blown to smithereens by charged &3%killer%&4"
     Dolphin:
       - "&3%player%&4 was slain by &3%killer%&4"
     Donkey:
@@ -626,19 +640,24 @@ death-messages:
     PlayerFireball: # Just in case
       - "&3%player%&4 was fireballed by &3%killer%&4"
     PlayerSnowball: # Just in case
-      - "&3%player%&4 was pummeled by &3%killer%&4"
+      - "&3%player%&4 was pummeled by &3%killer%'s&4 &6Snowballs"
+      - "&3%player%&4 was raped by &3%killer%'s&4 &6Snowballs"
     PlayerProjectileCustom: # Bows, plugins like CrackShot
       - "&3%player%&4 was shot by &3%killer%&4 using &6%weapon_name%&4"
+      - "&3%player%&4 was impaled by &3%killer%&4 using &6%weapon_name%&4"
     PlayerPotion:
       - "&3%player%&4 was killed by &3%killer%&4 using magic"
   natural:
     Thorns:
       - "&3%player%&4 was killed while trying to hurt &3%killer%&4"
-    TNT:
+      - "&3%player%&4 killed himself trying to hurt &3%killer%&4"
+   TNT:
       - "&3%player%&4 blew up"
+      - "&3%player%&4 went kaboom"
       - "&3%player%&4 forgot to move away from the tnt"
     TNTKill:
       - "&3%player%&4 was blown up by &3%killer%&4"
+      - "&3%player%&4 was detonated by &3%killer%&4"
     WitherSkull:
       - "&3%player%&4 was shot by a &3%killer%&4's skull"
       - "&3%killer%&4's skull shot &3%player%&4"
@@ -666,7 +685,7 @@ death-messages:
       - "&3%player%&4 blew themselves up with &6an end crystal"
       - "&3%player%&4 exploded themselves up with &6an end crystal"
       - "&3%player%&4 suffered from a huge fucking config issue with &6an end crystal"
-      - "&6end crystal made &3%player%&4 kill themself"
+      - "&3%player%&4 convinced into suicide by &6an end crystal"
     Bed: # exploding beds or respawn anchors
       - "&3%player%&4 was killed by &6Intentional Game Design"
       - "&3%player%&4 just went kaboom with &6Intentional Game Design"
@@ -679,26 +698,30 @@ death-messages:
       - "&3%player%&4 failed to cactus dupe"
     CactusKill:
       - "&3%player%&4 walked into a cactus whilst trying to escape &3%killer%&4"
-      - "&3%player%&4 got pricked to death by a cactus and failed to escape &3%killer%&4"
+      - "&3%player%&4 failed to cactus dupe whilst trying to escape &3%killer%&4"
+      - "&3%player%&4 got pricked to death by a cactus whilst trying to escape &3%killer%&4"
     Anvil:
       - "&3%player%&4 was squashed to death by &6Anvil"
       - "&3%player%&4 squished themselves against &6Anvil and died"
+      - "&3%player%&4 hurt their head on a falling &6Anvil"
     AnvilKill:
       - "&3%player%&4 was squashed to death by &6Anvil"
+      - "&3%player%&4 squished themselves against &6Anvil and died"
+      - "&3%player%&4 hurt their head on a falling &6Anvil"
     FallingBlock: # Only when a FallingBlock is modified to cause damage
       - "&3%player%&4 was squashed to death by a falling block"
+      - "&3%player%&4 suffocated to a falling block"
     FallingBlockKill: # as above
       - "&3%player%&4 was squashed to death by a falling block"
       - "&3%player%&4 suffocated to a falling block"
     UnknownArrow: # arrow from unknown entity or source, /summon?
-      - "&3%player%&4 was shot by arrow"
+      - "&3%player%&4 was shot by mysterious arrow"
     DispenserArrow:
-      - "&3%player%&4 was shot by arrow"
-      - "&3%player%&4 was shot in the knee and died"
+      - "&3%player%&4 was pummeled by arrows"
     DispenserFireball:
-      - "&3%player%&4 burned to death"
+      - "&3%player%&4 was pummeled by fire"
     DispenserSnowball:
-      - "&3%player%&4 died"
+      - "&3%player%&4 was pummeled by snowballs"
     Drowning:
       - "&3%player%&4 thought they had water breathing"
       - "&3%player%&4 drowned"
@@ -714,11 +737,13 @@ death-messages:
       - "&3%player%&4 forgot to breathe whilst running away from &3%killer%&4"
       - "&3%killer%&4 held &3%player%&4 underwater too long"
     PotionPoison: # Normally impossible
-      - "&3%player%&4 died"
+      - "&3%player%&4 experienced impossible death"
     PotionWither:
       - "&3%player%&4 withered away"
+      - "&3%player%&4 could not escape the wither effect"
     PotionWitherKill:
       - "&3%player%&4 withered away whilst fighting &3%killer%&4"
+      - "&3%player%&4 could not escape the wither effect whilst fighting &3%killer%&4"
     PotionHarming:
       - "&3%player%&4 was killed by magic"
     PotionHarmingKill:
@@ -750,30 +775,45 @@ death-messages:
       - "&3%player%&4 was reduced to lava by lava"
     LavaKill:
       - "&3%player%&4 tried to swim in lava while trying to escape &3%killer%&4"
+      - "&3%player%&4 drowned in lava while trying to escape &3%killer%&4"
+      - "&3%player%&4 burned up in lava while trying to escape &3%killer%&4"
+      - "&3%player%&4 became lava while trying to escape &3%killer%&4"
+      - "&3%player%&4 was reduced to lava by lava while trying to escape &3%killer%&4"
     Lightning: # Happens when struck by lightning, vanilla: FireTick/FireBlock
       - "&3%player%&4 went up in flames"
       - "&3%player%&4 was struck by lightning"
+      - "&3%player%&4 just coped gods cock"
     Starvation:
       - "&3%player%&4 starved to death"
       - "&3%player%&4 didn't eat enough food"
       - "&3%player%&4 forgot to eat"
+      - "&3%player%&4 wasn't eatting enough"
     Suffocation:
       - "&3%player%&4 suffocated in a wall"
+      - "&3%player%&4 got stuck in a wall"
     Cramming: # maxEntityCramming
       - "&3%player%&4 was squished too much"
+      - "&3%player%&4 was squished to death"
     CrammingKill:
       - "&3%player%&4 was squished too much"
+      - "&3%player%&4 was squished to death"
     Void:
       - "&3%player%&4 fell out of the world"
+      - "&3%player%&4 forgot the world ends"
+      - "&3%player%&4 realised the void is infinite"
     VoidFall: # in DMP, if entity falls over y>=64 to the void
       - "&3%player%&4 fell from a high place and fell out of the world"
+      - "&3%player%&4 fell from a high place and forgot the world ends"
+      - "&3%player%&4 fell from a high place and realised the void is infinite"
     VoidKill:
       - "&3%player%&4 didn't want to live in the same world as &3%killer%&4"
+      - "&3%player%&4 jumped in the void to escape &3%killer%&4"
     FallShort: # Fall distance 5 blocks or less, or ender pearl
       - "&3%player%&4 hit their head on the ground too hard"
       - "&3%player%&4 tripped and fell"
       - "&3%player%&4 didn't land right"
       - "&3%player%&4 sprained his ankle"
+      - "&3%player%&4 stubbed their toe"
     FallLong: # Fall distance over 5 blocks
       - "&3%player%&4 fell and crushed their insides with their legbones."
       - "&3%player%&4 broke their neck, and the rest of their body."
@@ -782,8 +822,10 @@ death-messages:
       - "&3%player%&4 made out with the ground"
     FallLadder:
       - "&3%player%&4 dropped off a ladder"
+      - "&3%player%&4 didn't grip the ladder"
     FallVine:
       - "&3%player%&4 fell off some vines"
+      - "&3%player%&4 didn't grip the vines"
     FallWeepingVine:
       - "&3%player%&4 fell off some weeping vines"
     FallTwistingVine:
@@ -800,7 +842,7 @@ death-messages:
     FallFire:
       - "&3%player%&4 fell into a patch of fire"
     FallCacti:
-      - "&3%player%&4 fell into a patch of cacti"
+      - "&3%player%&4 fell arse first on a patch of cacti"
     FallBerryBush:
       - "&3%player%&4 fell into a sweet berry bush"
     FallKill:
@@ -829,7 +871,8 @@ death-messages:
       - "&3%player%&4 went off with a bang due to a firework fired from &6%weapon_name%&4 by &3%killer%&4"
     Elytra:
       - "&3%player%&4 experienced kinetic energy"
-      - "&3%player%&4 smashed themselves and died trying to fly with elytra."
+      - "&3%player%&4 smashed themselves and died trying to fly with elytra"
+      - "&3%player%&4 impaled themselves on a wall"
     ElytraKill:
       - "&3%player%&4 experienced kinetic energy whilst trying to escape &3%killer%&4"
       - "&3%player%&4 smashed themselves and died trying to escape &3%killer%&4"
@@ -837,6 +880,7 @@ death-messages:
     Suicide: # Some plugins may use this one, /suicide and /kill for example
       - "&3%player%&4 killed themselves"
       - "&3%player%&4 gave up on life"
+      - "&3%player%&4 exe not responding"
     Melting: # Some plugins may use this one, orig. Snowmans + hot biomes
       - "&3%player%&4 killed themselves"
     DryOut: # Some killed themselves may use this one, orig. fish outside water
