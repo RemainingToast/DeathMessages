@@ -676,7 +676,7 @@ death-messages:
       - "&3%player%&4 was violently assassainated by &3%killer%&4 with an &6end crystal"
       - "&3%player%&4 just deepthroated &3%killer%’s&4 &6end crystal"
       - "&3%killer%&4 made &3%player%&4 eat an &6end crystal"
-      - "&3%killer%&4 got absolutely fucking annihilated by &3%killer%&4"
+      - "&3%player%&4 got absolutely fucking annihilated by &3%killer%'s&4 &6end crystal"
     EnderCrystalSuicide:
       - "&3%player%&4 just went kaboom with an &6end crystal"
       - "&3%player%&4 killed themselves with an &6end crystal"
