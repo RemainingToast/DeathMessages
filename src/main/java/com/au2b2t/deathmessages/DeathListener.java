@@ -657,10 +657,12 @@ class DeathListener implements Listener
                             result = new TextComponent("");
                         }
                     } else if (tag.equals("player") || tag.equals("killer")) {
-                        String name = (tag.equals("killer")) ? killer_name : p.getName();
-                        result = new TextComponent(TextComponent.fromLegacyText(name));
-                        result.setClickEvent(new ClickEvent(ClickEvent.Action.SUGGEST_COMMAND, "/w " + ChatColor.stripColor(name) + " "));
-                        result.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ComponentBuilder(ChatColor.GOLD + "Message " + ChatColor.DARK_AQUA + name).create()));
+                        Player p1 = tag.equals("killer") ? Bukkit.getPlayer(killer_name) : p;
+                        result = new TextComponent(TextComponent.fromLegacyText(p1 != null ? p1.getName() : killer_name));
+                        if (p1 != null) {
+                            result.setClickEvent(new ClickEvent(ClickEvent.Action.SUGGEST_COMMAND, "/w " + ChatColor.stripColor(p1.getName()) + " "));
+                            result.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ComponentBuilder(ChatColor.GOLD + "Message " + ChatColor.DARK_AQUA + p1.getName()).create()));
+                        }
                     } else if (tag.equals("victim")) {
                         result = new TextComponent(TextComponent.fromLegacyText(p.getDisplayName()));
                         try {
